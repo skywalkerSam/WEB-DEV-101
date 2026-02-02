@@ -6,17 +6,17 @@
 
 ## `<!DOCTYPE html>`
 
+it tells browsers that the document is an `HTML5` document.
+
 - All pages should begin with `<!DOCTYPE html>`.
 
-- `<!DOCTYPE html>` tells browsers that the document is an HTML5 document.
-
-This special string is known as a *declaration* and ensures the browser tries to meet *industry-wide* specifications.
+`Note`: This special string is known as a *declaration* and ensures the browser tries to meet *industry-wide* specifications.
 
 &emsp;
 
 ## Void Elements
 
-- Some HTML *elements* do not have a closing tag. These are known as *void* elements.
+Some HTML *elements* do not have a closing tag. These are known as *void* elements.
 
 - Here is an example of an image element which is a void element: 
 
@@ -31,7 +31,7 @@ While many code formatters like _Prettier_, will choose to include the `/` in vo
 
 ## `<main></main>`
 
-- The *main* element is used to represent the **main content** of the body of an HTML document.
+The *main* element is used to represent the **main content** of the body of an HTML document.
 
 - Content inside the *main* element should be **unique** to the document and should not be repeated in other parts of the document.
 
@@ -39,15 +39,15 @@ While many code formatters like _Prettier_, will choose to include the `/` in vo
 
 ## `<section></section>`
 
-- The *section* element is used to define sections in a document, such as **chapters**, **headers**, **footers**, or any other sections of the document.
+The *section* element is used to define sections in a document, such as **chapters**, **headers**, **footers**, or any other sections of the document.
 
-- it is a *semantic element* that helps with SEO and accessibility.
+- it is a semantic element that helps with *SEO* and *accessibility*.
 
 &emsp;
 
 ## `<figure></figure>`
 
-- The *figure element* represents self-contained content and will allow you to associate an image with a **caption**.
+The *figure element* represents self-contained content and will allow you to associate an image with a *caption*.
 
 ```html
 
@@ -57,3 +57,19 @@ While many code formatters like _Prettier_, will choose to include the `/` in vo
 </figure>
 ```
 
+&emsp;
+
+## `<blockquote></blockquote>`
+
+Blockquotes are used to indicate a section of text that is a quotation from another source. 
+
+- Browsers typically add indentation(`&nbsp;`) and sometimes *italicize* the text.
+
+```html
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<blockquote>I think, therefore I am. (Rene Descartes)</blockquote>
+<p>Paragraph 3</p>
+```
+
+## 
