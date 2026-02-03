@@ -1,6 +1,12 @@
 # HTML Notes
 
-- HTML *attributes* are special words used inside the opening tag of an element to control the element's behavior. 
+- **Separation of concerns** is a design principle where you separate your programs into distinct sections and have each section address a separate concern.
+
+- HTML **attributes** are special words used inside the opening tag of an element to control the element's behavior.
+
+  - The `id` attribute adds a **unique** identifier (`#`) to an HTML element. (`#id`)
+
+  - `class` is best used when you want to apply a set of styles to **many** elements. (`.class`)
 
 &emsp;
 
@@ -45,6 +51,16 @@ The *section* element is used to define sections in a document, such as **chapte
 
 &emsp;
 
+## `<div></div>`
+
+The div element is used as a **container** to group other elements that will share a set of CSS *styles*.
+
+- if you wanted to divide up your content into sections, then the `<section></section>` element would be more appropriate than a `div` element.
+
+- The `section` element has semantic meaning over the `div` element which is not *semantic*.
+
+&emsp;
+
 ## `<figure></figure>`
 
 The *figure element* represents self-contained content and will allow you to associate an image with a *caption*.
@@ -72,4 +88,62 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
 <p>Paragraph 3</p>
 ```
 
-## 
+&emsp;
+
+## HTML "entities"
+
+- An HTML entity, or **character reference**, is a set of characters used to represent a **reserved character** in HTML.
+
+  - if you want to write this:
+
+    ```html
+    <p>This is an <img /> element</p>
+    ```
+  - You have to write it like this using HTML "**entities**"
+
+    ```html 
+    <p>This is an &lt;img /&gt; element</p>
+    ```
+  - **Named character references** start with an *ampersand* sign (`&`) and end with a *semicolon* (`;`). 
+
+  - **Decimal numeric references** starts with an *ampersand* sign (`&`) and *hash* symbol (`#`), followed by one or more *decimal digits*, followed by a *semicolon* (`;`).
+
+    - &#60;
+
+    ```html
+    &#60;
+    ```
+
+    - &#169;
+
+    ```html
+    &#169;
+    ```
+
+    - &#174;
+
+    ```html
+    &#174;
+    ```
+
+  - **Hexadecimal numeric reference** starts with an *ampersand* sign (`&`), *hash* symbol (`#`), and the letter `x`. Then it is followed by one or more `ASCII hex` digits and ends with a *semicolon* (`;`).
+
+    - &#x3C;
+
+    ```html
+    &#x3C;
+    ``` 
+
+    - &#x20AC; 
+      
+    ```html
+    &#x20AC;
+    ```
+
+    - &#x03A9;
+
+    ```html
+    &#x03A9;
+    ``` 
+
+&emsp;
