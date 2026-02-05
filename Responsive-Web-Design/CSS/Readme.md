@@ -1,5 +1,8 @@
 # CSS Notes
 
+w/ freeCodeCamp.org
+
+&nbsp;
 
 if you think of a website as a house, `HTML` would be the foundation and framework, while `CSS` would be the paint, wallpaper, and decorations that make the house *visually appealing* and **unique***
 
@@ -11,7 +14,7 @@ if you think of a website as a house, `HTML` would be the foundation and framewo
 
 Another important feature of `CSS` is its *cascading* nature, which is where the "cascading" in its name comes from (`Cascading Style Sheets`). This means that styles can be *inherited* and **overridden**, allowing for a hierarchical structure of *styling*. it allows you to build engaging web *experiences* that capture users' **attention** and enhance their interaction with web content. 
 
-&emsp;
+&nbsp;
 
 ## Basic Anatomy of a CSS Rule
 
@@ -38,7 +41,7 @@ selector {
 
 `Note`: After each *property* name, you need to place a colon(`:`), and after each *value*, you should have a semicolon(`;`).
 
-&emsp;
+&nbsp;
 
 ## Units
 
@@ -52,7 +55,7 @@ selector {
   - Viewport Width (`vw`)
   - Viewport Height (`vh`)
 
-&emsp;
+&nbsp;
 
 ## CSS Combinators
 
@@ -132,6 +135,6 @@ CSS combinators are used to define the relationship between selectors in CSS. Th
   
   - The *subsequent-sibling* combinator (`~`) targets all paragraph siblings that appear after the `h2` element, regardless of whether they are immediate siblings.
 
-&emsp;
+&nbsp;
 
 ## 
