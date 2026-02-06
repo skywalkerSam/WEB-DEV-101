@@ -137,4 +137,41 @@ CSS combinators are used to define the relationship between selectors in CSS. Th
 
 &nbsp;
 
-## 
+## `inline` vs `block-level` elements
+
+**Block-level** elements are elements that take up the **full width** available to them by default, stretching across the width of their container.
+
+  - These elements always start on a **new line** and push other content to the *next line*, creating a "block" of content.
+
+  - Block-level elements have the CSS property `display: block;` applied by default. 
+
+  - Block-level elements are ideal when you want content to stack **vertically**, such as paragraphs, sections, or larger blocks of content. 
+
+  - They're commonly used to define the **layout** and **structure** of a webpage.
+
+  - Examples include: `<div></div>`, headings, `<p></p>`, `<ol></ol>`, `<ul></ul>`, and `<section></section>` elements.
+
+**inline elements**, unlike block-level elements, they take up **only as much width as they need** and **do not** start on a *new line*. 
+
+  - These elements flow within the content, allowing text and other inline elements to appear **alongside** them.
+
+  - inline elements have the CSS property `display: inline;` applied by default. 
+
+  - inline elements are best used for styling smaller portions of text or content **within a line**, such as emphasizing a word, creating hyperlinks, or applying specific styles to parts of a paragraph.
+
+  - `inline` elements **cannot** have their size controlled.
+
+  - Examples include: `<span></span>`, `<a></a>`, `<img>` elements.
+
+`NOTE`: You change the behavior of a *block-level* element to behave like an *inline element* by: `display: inline;`
+
+### `display: inline-block;`
+
+The inline-block property is a **hybrid** of these two behaviors. Like inline elements, inline-block elements remain in the text flow *without* starting on a new line.
+
+  - They behave like inline elements, but unlike inline elements, you can **adjust** the **width** and **height** of an `inline-block` element.
+
+  - `inline-block` elements allow for **full control over dimensions** while still **staying inline** with other content.
+
+You can use it for creating layouts that require both **alignment** and **dimension** control within a *continuous text flow*.
+
