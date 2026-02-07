@@ -68,6 +68,8 @@ The div element is used as a **container** to group other elements that will sha
 
 - The `section` element has semantic meaning over the `div` element which is not *semantic*.
 
+`NOTE`: `<article></article>` elements commonly contain **multiple elements** that have **related information**.
+
 &nbsp;
 
 ## `<figure></figure>`
