@@ -33,8 +33,15 @@ Another important feature of `CSS` is its *cascading* nature, which is where the
      - `value`
 
 ```css
-
 selector {
+  property: value;
+}
+```
+
+Multiple selectors sharing the same set of styles
+
+```css
+selector1, selector2 {
   property: value;
 }
 ```
