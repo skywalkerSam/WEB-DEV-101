@@ -175,3 +175,24 @@ The inline-block property is a **hybrid** of these two behaviors. Like inline el
 
 You can use it for creating layouts that require both **alignment** and **dimension** control within a *continuous text flow*.
 
+&nbsp;
+
+## `margin` & `padding`
+
+**Margins** control the space **outside** an element, helping to separate it from other elements and define the layout structure. 
+
+  - Using a **singular** value on the `margin` shorthand, that exact value will be applied to all four sides of the target element.
+
+  - Using **two** values, the **first** value applies to the **top** and **bottom**, while the **second** value applies to the **left** and **right** sides of the element.
+
+  - If **three** values are provided, the **first** value applies to the **top** margin, the **second** value to the **left** and **right** margin, and the **third** value to the **bottom** margin.
+
+  - When using **four** values, `margin-top`, `margin-right`, `margin-bottom`, `margin-left`.
+
+**Padding** controls the space **inside** an element, improving content readability and *aesthetic* appeal.
+
+  - The `padding` property applies space **between the content** and its **border**.
+
+  - Shorthand rules are the same as the margin ones.
+
+
