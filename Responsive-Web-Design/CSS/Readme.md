@@ -48,6 +48,26 @@ selector1, selector2 {
 
 `Note`: After each *property* name, you need to place a colon(`:`), and after each *value*, you should have a semicolon(`;`).
 
+### Fallbacks
+
+You can add a fallback value by adding another value separated by a comma. 
+
+  - Fallbacks are used in instances where the initial is not found/unavailable.
+
+```css
+h1, h2 {
+  font-family: Impact, serif;
+}
+```
+
+### Default link styles
+
+- You change the properties of a link when the link has been **visited** by using a *pseudo-selector* that looks like `a:visited { propertyName: propertyValue; }`.
+
+- You change the properties of a link when the mouse **hovers** over them by using a *pseudo-selector* that looks like `a:hover { propertyName: propertyValue; }`.
+
+- You change the properties of a link when the link is being **clicked** by using a *pseudo-selector* that looks like `a:active { propertyName: propertyValue; }`.
+
 &nbsp;
 
 ## Units
