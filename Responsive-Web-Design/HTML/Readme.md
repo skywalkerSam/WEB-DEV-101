@@ -1,4 +1,8 @@
-# HTML Notes
+# [HTML](https://www.freecodecamp.org/learn/responsive-web-design-v9/) Notes
+
+w/ freeCodeCamp.org
+
+&nbsp;
 
 - **Separation of concerns** is a design principle where you separate your programs into distinct sections and have each section address a separate concern.
 
@@ -8,7 +12,7 @@
 
   - `class` is best used when you want to apply a set of styles to **many** elements. (`.class`)
 
-&emsp;
+&nbsp;
 
 ## `<!DOCTYPE html>`
 
@@ -18,22 +22,27 @@ it tells browsers that the document is an `HTML5` document.
 
 `Note`: This special string is known as a *declaration* and ensures the browser tries to meet *industry-wide* specifications.
 
-&emsp;
+&nbsp;
+
+## Basic HTML Syntax
+
+```html
+<element attribute="value">
+  inner text
+</element>
+```
+&nbsp;
 
 ## Void Elements
 
 Some HTML *elements* do not have a closing tag. These are known as *void* elements.
 
-- Here is an example of an image element which is a void element: 
+- Here is an example of an image element which is a void element: `<img>`, `<link>`, `<hr>`, `<br>`
 
-```html
-
-  <img>
-```
 
 While many code formatters like _Prettier_, will choose to include the `/` in void elements (`<img />`), the HTML spec states that the presence of the `/` "does not mark the start tag as self-closing but instead is *unnecessary* and has no effect of any kind".
 
-&emsp;
+&nbsp;
 
 ## `<main></main>`
 
@@ -41,7 +50,7 @@ The *main* element is used to represent the **main content** of the body of an H
 
 - Content inside the *main* element should be **unique** to the document and should not be repeated in other parts of the document.
 
-&emsp;
+&nbsp;
 
 ## `<section></section>`
 
@@ -49,7 +58,7 @@ The *section* element is used to define sections in a document, such as **chapte
 
 - it is a semantic element that helps with *SEO* and *accessibility*.
 
-&emsp;
+&nbsp;
 
 ## `<div></div>`
 
@@ -59,7 +68,9 @@ The div element is used as a **container** to group other elements that will sha
 
 - The `section` element has semantic meaning over the `div` element which is not *semantic*.
 
-&emsp;
+`NOTE`: `<article></article>` elements commonly contain **multiple elements** that have **related information**.
+
+&nbsp;
 
 ## `<figure></figure>`
 
@@ -73,7 +84,7 @@ The *figure element* represents self-contained content and will allow you to ass
 </figure>
 ```
 
-&emsp;
+&nbsp;
 
 ## `<blockquote></blockquote>`
 
@@ -88,7 +99,7 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
 <p>Paragraph 3</p>
 ```
 
-&emsp;
+&nbsp;
 
 ## HTML "entities"
 
@@ -146,4 +157,4 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
     &#x03A9;
     ``` 
 
-&emsp;
+&nbsp;

@@ -1,5 +1,8 @@
-# CSS Notes
+# [CSS](https://www.freecodecamp.org/learn/responsive-web-design-v9/) Notes
 
+w/ freeCodeCamp.org
+
+&nbsp;
 
 if you think of a website as a house, `HTML` would be the foundation and framework, while `CSS` would be the paint, wallpaper, and decorations that make the house *visually appealing* and **unique***
 
@@ -11,7 +14,7 @@ if you think of a website as a house, `HTML` would be the foundation and framewo
 
 Another important feature of `CSS` is its *cascading* nature, which is where the "cascading" in its name comes from (`Cascading Style Sheets`). This means that styles can be *inherited* and **overridden**, allowing for a hierarchical structure of *styling*. it allows you to build engaging web *experiences* that capture users' **attention** and enhance their interaction with web content. 
 
-&emsp;
+&nbsp;
 
 ## Basic Anatomy of a CSS Rule
 
@@ -30,15 +33,42 @@ Another important feature of `CSS` is its *cascading* nature, which is where the
      - `value`
 
 ```css
-
 selector {
+  property: value;
+}
+```
+
+Multiple selectors sharing the same set of styles
+
+```css
+selector1, selector2 {
   property: value;
 }
 ```
 
 `Note`: After each *property* name, you need to place a colon(`:`), and after each *value*, you should have a semicolon(`;`).
 
-&emsp;
+### Fallbacks
+
+You can add a fallback value by adding another value separated by a comma. 
+
+  - Fallbacks are used in instances where the initial is not found/unavailable.
+
+```css
+h1, h2 {
+  font-family: Impact, serif;
+}
+```
+
+### Default link styles
+
+- You change the properties of a link when the link has been **visited** by using a *pseudo-selector* that looks like `a:visited { propertyName: propertyValue; }`.
+
+- You change the properties of a link when the mouse **hovers** over them by using a *pseudo-selector* that looks like `a:hover { propertyName: propertyValue; }`.
+
+- You change the properties of a link when the link is being **clicked** by using a *pseudo-selector* that looks like `a:active { propertyName: propertyValue; }`.
+
+&nbsp;
 
 ## Units
 
@@ -52,7 +82,7 @@ selector {
   - Viewport Width (`vw`)
   - Viewport Height (`vh`)
 
-&emsp;
+&nbsp;
 
 ## CSS Combinators
 
@@ -132,6 +162,64 @@ CSS combinators are used to define the relationship between selectors in CSS. Th
   
   - The *subsequent-sibling* combinator (`~`) targets all paragraph siblings that appear after the `h2` element, regardless of whether they are immediate siblings.
 
-&emsp;
+&nbsp;
 
-## 
+## `inline` vs `block-level` elements
+
+**Block-level** elements are elements that take up the **full width** available to them by default, stretching across the width of their container.
+
+  - These elements always start on a **new line** and push other content to the *next line*, creating a "block" of content.
+
+  - Block-level elements have the CSS property `display: block;` applied by default. 
+
+  - Block-level elements are ideal when you want content to stack **vertically**, such as paragraphs, sections, or larger blocks of content. 
+
+  - They're commonly used to define the **layout** and **structure** of a webpage.
+
+  - Examples include: `<div></div>`, headings, `<p></p>`, `<ol></ol>`, `<ul></ul>`, and `<section></section>` elements.
+
+**inline elements**, unlike block-level elements, they take up **only as much width as they need** and **do not** start on a *new line*. 
+
+  - These elements flow within the content, allowing text and other inline elements to appear **alongside** them.
+
+  - inline elements have the CSS property `display: inline;` applied by default. 
+
+  - inline elements are best used for styling smaller portions of text or content **within a line**, such as emphasizing a word, creating hyperlinks, or applying specific styles to parts of a paragraph.
+
+  - `inline` elements **cannot** have their size controlled.
+
+  - Examples include: `<span></span>`, `<a></a>`, `<img>` elements.
+
+`NOTE`: You change the behavior of a *block-level* element to behave like an *inline element* by: `display: inline;`
+
+### `display: inline-block;`
+
+The inline-block property is a **hybrid** of these two behaviors. Like inline elements, inline-block elements remain in the text flow *without* starting on a new line.
+
+  - They behave like inline elements, but unlike inline elements, you can **adjust** the **width** and **height** of an `inline-block` element.
+
+  - `inline-block` elements allow for **full control over dimensions** while still **staying inline** with other content.
+
+You can use it for creating layouts that require both **alignment** and **dimension** control within a *continuous text flow*.
+
+&nbsp;
+
+## `margin` & `padding`
+
+**Margins** control the space **outside** an element, helping to separate it from other elements and define the layout structure. 
+
+  - Using a **singular** value on the `margin` shorthand, that exact value will be applied to all four sides of the target element.
+
+  - Using **two** values, the **first** value applies to the **top** and **bottom**, while the **second** value applies to the **left** and **right** sides of the element.
+
+  - If **three** values are provided, the **first** value applies to the **top** margin, the **second** value to the **left** and **right** margin, and the **third** value to the **bottom** margin.
+
+  - When using **four** values, `margin-top`, `margin-right`, `margin-bottom`, `margin-left`.
+
+**Padding** controls the space **inside** an element, improving content readability and *aesthetic* appeal.
+
+  - The `padding` property applies space **between the content** and its **border**.
+
+  - Shorthand rules are the same as the margin ones.
+
+
