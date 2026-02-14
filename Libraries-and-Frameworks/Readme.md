@@ -30,6 +30,24 @@ Although libraries and frameworks are used across projects of all sizes, the cho
 
 ## Single Page Applications (SPAs)
 
+Unlike traditional multi-page websites, single page applications (SPAs) **load only one HTML page** and **dynamically update the content** as the user interacts with the app, **without reloading the entire page**. This approach can lead to **faster, more responsive applications**, but it also comes with a set of **challenges** and **considerations**.
+
+- SPAs **heavily use JavaScript** to manage the application's state and render content. Instead of requesting new HTML pages from the server, SPAs use JavaScript to manipulate the DOM and fetch data asynchronously.
+
+### Drawbacks of SPAs
+
+- **SEO** Optimization
+
+- **Navigation** and browser **history**.
+
+- **Unable to bookmark** any specific page.
+
+- **Performance** is impacted due to a large/bloated bundle size.
+
+- **Screen readers may struggle** with dynamically updated content. (Accessibility)
+
+- **Refreshing the page might reset the application** to its initial state, rather than maintaining the current view.
+
 
 
 
