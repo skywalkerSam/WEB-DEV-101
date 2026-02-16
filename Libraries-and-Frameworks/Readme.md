@@ -48,6 +48,85 @@ Unlike traditional multi-page websites, single page applications (SPAs) **load o
 
 - **Refreshing the page might reset the application** to its initial state, rather than maintaining the current view.
 
+&nbsp;
+
+## React
+
+React is one of the most popular JavaScript libraries for building **user interfaces** and **web applications**.
+
+- Virtual DOM
+
+- State Management
+
+- Reusable UI Components
+
+### React Components
+
+Components are the **building blocks** of React applications that allow developers to **break down complex user interfaces into smaller, manageable pieces**, making it easier to develop and maintain large-scale applications.
+
+- Functional Components (Modern, Simple, & Efficient)
+
+- Class-based Components (Traditional, Complex, & No longer used.)
+
+At a higher level, you can think of components like **JavaScript functions that return elements describing the UI**.
+
+### JSX
+
+This UI is described using **JSX**, *a syntax extension* for JavaScript that looks similar to HTML but allows you to **write UI elements in a more declarative way**.
+
+  ```jsx
+  function Greeting() {
+  const name = "John"
+  {/* The result will be Hello John*/}
+  return <h1 className="title">Hello {name}</h1>;
+  }
+  ```
+
+  - We using `className` instead of `class` because in JavaScript, `class` is a **"reserved keyword"**. So, we need to use `className` *instead*.
+
+  - We are using a **Capital** letter at the *beginning* of the component name because React treats components with a capital letter as **custom components/user-defined components**, while elements with **lowercase** letters are considered **built-in HTML elements**.
+
+    - This subtle distinction helps React **differentiate** between native HTML tags and components that you create.
+
+`Note`: When working with **JSX**, all *tags* and uses of *components* need to be explicitly **closed**. 
+
+### React Fragment
+
+React fragments are used to group elements together.
+
+- This is because **multiple sibling elements need to be wrapped in a parent element** while working with `JSX`.
+
+```jsx
+function Greeting() {
+  const name = "John";
+  return (
+    <Fragment>
+      <h1>Hello {name}</h1>
+      <p>Nice to meet you.</p>
+    </Fragment>
+  );
+}
+```
+
+You can also choose to use **empty JSX tags** which can serve as **shorthand for fragments**:
+
+```jsx
+function Greeting() {
+  const name = "John";
+  return (
+    <>
+      <h1>Hello {name}</h1>
+      <p>Nice to meet you.</p>
+    </>
+  );
+}
+```
+
+&nbsp;
+
+## import & export Components
+
+
 
 
 
