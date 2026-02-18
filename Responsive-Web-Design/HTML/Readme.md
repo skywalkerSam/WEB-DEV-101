@@ -92,12 +92,12 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
 
 - Browsers typically add indentation(`&nbsp;`) and sometimes *italicize* the text.
 
-```html
-<p>Paragraph 1</p>
-<p>Paragraph 2</p>
-<blockquote>I think, therefore I am. (Rene Descartes)</blockquote>
-<p>Paragraph 3</p>
-```
+  ```html
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <blockquote>I think, therefore I am. (Rene Descartes)</blockquote>
+  <p>Paragraph 3</p>
+  ```
 
 &nbsp;
 
@@ -115,46 +115,116 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
     ```html 
     <p>This is an &lt;img /&gt; element</p>
     ```
-  - **Named character references** start with an *ampersand* sign (`&`) and end with a *semicolon* (`;`). 
+  - **Named character references** start with an *ampersand* sign (`&`) and end with a *semicolon* (`;`).
+  
+    - `&lt;`
+
+    - `&gt;`
 
   - **Decimal numeric references** starts with an *ampersand* sign (`&`) and *hash* symbol (`#`), followed by one or more *decimal digits*, followed by a *semicolon* (`;`).
 
     - &#60;
 
-    ```html
-    &#60;
-    ```
+      ```html
+      &#60;
+      ```
 
     - &#169;
 
-    ```html
-    &#169;
-    ```
+      ```html
+      &#169;
+      ```
 
     - &#174;
 
-    ```html
-    &#174;
-    ```
+      ```html
+      &#174;
+      ```
 
   - **Hexadecimal numeric reference** starts with an *ampersand* sign (`&`), *hash* symbol (`#`), and the letter `x`. Then it is followed by one or more `ASCII hex` digits and ends with a *semicolon* (`;`).
 
     - &#x3C;
 
-    ```html
-    &#x3C;
-    ``` 
+      ```html
+      &#x3C;
+      ``` 
 
     - &#x20AC; 
       
-    ```html
-    &#x20AC;
-    ```
+      ```html
+      &#x20AC;
+      ```
 
     - &#x03A9;
 
-    ```html
-    &#x03A9;
-    ``` 
+      ```html
+      &#x03A9;
+      ``` 
+
+&nbsp;
+
+## Search Engine Optimization (`SEO`) 
+
+A practice that optimizes web pages so they become **more visible** and **rank higher** on **search engines**.
+
+- A short **description**
+
+  ```html
+  <meta
+  name="description"
+  content="Discover expert tips and techniques for gardening in small spaces, choosing the right plants, and maintaining a thriving garden."
+  />
+  ```
+
+### Open Graph (`OG`)
+
+The open graph protocol enables you to **control how your website's content appears** across various **social media** platforms, such as Facebook, LinkedIn, and more.
+
+- `og:title`
+
+  ```html
+  <meta content="freeCodeCamp.org" property="og:title" />
+  ```
+
+- `og:type`
+
+  ```html
+  <meta property="og:type" content="website" />
+  ```
+
+  - Examples of this content include *articles*, *websites*, *videos*, or *music*.
+
+- `og:image`
+
+  ```html
+  <meta
+  content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+  property="og:image"
+  />
+  ```
+
+  - images should be **high quality** with good dimensions and ratios.
+
+- `og:url`
+
+  ```html
+  <meta property="og:url" content="https://www.freecodecamp.org" />
+  ```
+
+  - **Homepage** URL
+
+There are many more `OG` *properties* that you can set, like `description`, `audio`, `video` and `locale`. However, the open graph `url`, `image`, `type`, and `title` are the most important ones to include.
+
+&nbsp;
+
+## 
+
+
+
+
+
+
+
+
 
 &nbsp;
