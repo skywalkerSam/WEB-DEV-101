@@ -217,8 +217,116 @@ There are many more `OG` *properties* that you can set, like `description`, `aud
 
 &nbsp;
 
-## 
+## Audio & Video
 
+The audio and video elements allow you to **add sound and video content** to your HTML documents. 
+
+- The **audio** element supports popular audio formats like `mp3`, `wav`, and `ogg`. 
+
+  ```html
+  <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3"></audio>
+  ```
+
+  If you want to **see the audio player** on the page, then you can add the audio element with the `controls` attribute.
+
+  ```html
+  <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3" controls></audio>
+  ```
+
+  `Note`: Some browsers, such as **Safari**, *may not* display a volume control by default even when the controls attribute is present.
+
+  The `loop` attribute is a boolean attribute that makes the audio replay continuously.
+
+  ```html
+  <audio
+    src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+    loop
+    controls
+  ></audio>
+  ```
+
+  Another attribute you can use is the `muted` attribute. When present in the `audio` element, this boolean attribute will start the audio in a muted state. 
+
+  ```html
+  <audio
+    src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+    loop
+    controls
+    muted
+  ></audio>
+  ```
+
+  When it comes to *audio file types*, there are **differences in which browsers support which type**. To accommodate this, you can use `source` elements inside the `audio` element and the browser will select the first source that it *understands*. 
+
+  ```html
+  <audio controls>
+    <source src="audio.ogg" type="audio/ogg" />
+    <source src="audio.wav" type="audio/wav" />
+    <source src="audio.mp3" type="audio/mpeg" />
+  </audio>
+  ```
+
+- The **video** element supports `mp4`, `ogg`, and `webm` formats.
+
+  ```html
+  <video
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+    loop
+    controls
+    muted
+    width="400"
+  ></video>
+  ```
+
+  Add the `autoplay` attribute to the opening video tag so the video plays automatically.
+
+  ```html
+  <video
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+    autoplay
+    loop
+    controls
+    muted
+    width="400"
+  ></video>
+  ```
+
+  If you wanted to display an image while the video is downloading, you can use the `poster` attribute. 
+
+  ```html
+  <video
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+    loop
+    controls
+    muted
+    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+    width="400"
+  ></video>
+  ```
+
+  You can also use the `source` element inside a `video` element, just like you did with the `audio` element. This lets you provide the same video in **multiple formats**, and the browser will choose the first one it can play.
+
+  ```html
+  <video
+    controls
+    width="400"
+    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  >
+    <source
+      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+      type="video/mp4"
+    />
+    <source
+      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.webm"
+      type="video/webm"
+    />
+    Your browser does not support the video tag.
+  </video>
+  ```
+
+&nbsp;
+
+##
 
 
 
