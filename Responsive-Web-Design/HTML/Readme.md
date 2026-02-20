@@ -176,6 +176,8 @@ A practice that optimizes web pages so they become **more visible** and **rank h
   />
   ```
 
+&nbsp;
+
 ### Open Graph (`OG`)
 
 The open graph protocol enables you to **control how your website's content appears** across various **social media** platforms, such as Facebook, LinkedIn, and more.
@@ -217,7 +219,7 @@ There are many more `OG` *properties* that you can set, like `description`, `aud
 
 &nbsp;
 
-## Audio & Video
+## Working w/ Audio & Video
 
 The audio and video elements allow you to **add sound and video content** to your HTML documents. 
 
@@ -332,7 +334,128 @@ The audio and video elements allow you to **add sound and video content** to you
 
 &nbsp;
 
+## Working w/ images & SVGs
+
+There are 3 things to consider while working with images.
+
+1. Size
+
+    A smaller resolution results in a smaller file size. (duh?)
+
+      - ideally, your images should be the **same scale as the rendered size** on the page. 
+
+2. Format 
+
+    - **Raster formats**, i.e, **pixel-based**, with the **data tracking the color value in each pixel**. They **do not** *upscale* well. 
+
+      1. PNG
+      2. JPG
+
+    - Modern & Web Optimized Formats
+
+      1. SVG
+      2. WEBP
+      3. AVIF
+
+3. Compression
+
+    **Lossless** means that the **original data can be perfectly reconstructed** from the compressed data. 
+    
+    - if you try to compress a `JPG` image, it will result in a degraded quality since it is not lossless. 
+
+&nbsp;
+
+### image Licenses
+
+images are considered **intellectual property**, this means that they are **protected by copyright** regulations, most often belonging to the creator. **By default, images are released as all rights reserved**. The creator, or publisher sometimes, holds all copyright for the image.
+
+- Obtain written **permission** from the copyright holder.
+
+- **Purchase** a license from the copyright holder.
+
+- incorporate the image in a way that falls under **fair use**.
+
+    - Some examples of fair use would be to comment on, or review the art, or create a parody of the image.
+
+#### Permissive Licenses
+
+- Creative Commons license
+
+- BSD license
+
+An image under the **public domain** has no copyright attached to it and is free to be used **without any restrictions**.
+
+- images licensed specifically under the Creative Commons 0 (`CC0`) license are considered *public domain*.
+
+&nbsp;
+
+There are also sites like **Pixabay** and **Unsplash**, which offer `free-to-use` images. 
+
+&nbsp;
+
+`Note`: Always **be mindful of the copyright and licensing** when you use an image in your website.
+
+&nbsp;
+
+### Scalable Vector Graphic (`SVG`)
+
+A vector graphic **tracks data based on paths and equations** to plot *points*, *lines*, and *curves*.
+
+- Can be **scaled to any size** without impacting the quality.
+
+- Generally used for *icons* and *logos*.
+
+&nbsp;
+
+SVGs specifically have the added benefit of storing data in `XML`. This means you can use them directly in your code as raw `HTML` with the `svg` element. It also means you can **programmatically change the attributes** of the image.
+
+```html
+<!-- This will display a smily face 🙂 -->
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="45" stroke="black" stroke-width="4" fill="yellow" />
+  <circle cx="35" cy="40" r="5" fill="black" />
+  <circle cx="65" cy="40" r="5" fill="black" />
+  <path d="M35 65 Q50 80 65 65" stroke="black" stroke-width="4" fill="transparent" />
+</svg>
+```
+
+Each SVG element has **attributes that control its appearance and position** within the drawing area.
+
+- The `svg` element is the **container for the whole drawing**. It sets up the space where all the shapes appear. Everything you want to draw with SVG, such as *circles*, *lines*, or *paths*, goes inside the svg element.
+
+- The `circle` element is used to **make the face and the eyes**. One large circle forms the yellow face, and two smaller circles make the eyes.
+
+- The `path` element is used to **draw the smile**. It creates a *curved line* for the mouth.
+
+&nbsp;
+
+Here are some more examples of SVGs
+
+```html
+<!-- Star Icon -->
+<svg width="50" height="50" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 2L14.9 8.6L22 9.3L17 14.1L18.3 21.2L12 17.8L5.7 21.2L7 14.1L2 9.3L9.1 8.6L12 2Z"/>
+</svg>
+
+<!-- Heart Icon -->
+<svg width="50" height="50" viewBox="0 0 24 24" fill="crimson" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 6 4 4 6.5 4C8 4 9.5 4.8 10.5 6.09C11.5 4.8 13 4 14.5 4C17 4 19 6 19 8.5C19 12.28 15.6 15.36 10.45 20.04L12 21.35Z"/>
+</svg>
+
+<!-- Checkmark Icon -->
+<svg width="50" height="50" viewBox="0 0 24 24" fill="green" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20.29 5.71L9 17L3.71 11.71L5.12 10.29L9 14.17L18.88 4.29L20.29 5.71Z"/>
+</svg>
+```
+
+&nbsp;
+
+`Note`: SVGs allow you to adapt your layout to any **responsive design** you need.
+
+&nbsp;
+
 ##
+
 
 
 
