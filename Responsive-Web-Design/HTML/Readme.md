@@ -266,6 +266,10 @@ The audio and video elements allow you to **add sound and video content** to you
   </audio>
   ```
 
+  `Note`: The `source` element is a **void element** so it does not have a closing *tag*.
+
+&nbsp;
+
 - The **video** element supports `mp4`, `ogg`, and `webm` formats.
 
   ```html
@@ -323,6 +327,8 @@ The audio and video elements allow you to **add sound and video content** to you
     Your browser does not support the video tag.
   </video>
   ```
+
+  **MIME** (Multipurpose Internet Mail Extensions) is a standard to describe documents in other forms besides ASCII text, for example, audio, video, and images. (`type="video/mp4"`, `type="video/webm"`, `type="video/ogg"`, `type="video/quicktime"`, etc.)
 
 &nbsp;
 
