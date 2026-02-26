@@ -496,7 +496,17 @@ it **embeds an external site** on your web page.
 
   - items in an **allowlist** can be separated by **semicolons**(`;`) or **spaces**(` `), and **both can be used together**. 
 
-  - `clipboard-write` allows the embedded page to **write items to your clipboard**.
+  - `accelerometer` lets the `iframe` use **motion sensors** so it can detect things like device **tilting and rotation**.
+
+  - `clipboard-write` allows the embedded page to **write items to user's clipboard**.
+
+  - `encrypted-media` allows the use of **encrypted media extensions** to protect the video.
+
+  - `gyroscope` allows access to the device’s **motion and orientation** sensors.
+
+  - `web-share` allows sharing the iframe content through the device's **native share dialogs**. 
+
+  - `referrerpolicy` is the rule that determines **how much detail you share** when your page connects to another page. 
 
 - Embedded Map
 
