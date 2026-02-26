@@ -484,7 +484,7 @@ it **embeds an external site** on your web page.
   <iframe 
     width="400" 
     height="200" 
-    src="https://www.youtube.com/embed/watch?v=ApXoWvfEYVU&list=RDApXoWvfEYVU&start_radio=1"
+    src="https://www.youtube.com/embed/ApXoWvfEYVU"
     title="Post Malone, Swae Lee - Sunflower (Spider-Man: Into the Spider-Verse)"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin" 
