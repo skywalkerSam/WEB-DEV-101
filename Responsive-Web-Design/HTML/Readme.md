@@ -35,12 +35,12 @@ it tells browsers that the document is an `HTML5` document.
 
 ## Void Elements
 
-Some HTML *elements* do not have a closing tag. These are known as *void* elements.
+Some HTML elements **do not hold any content**, and therefore they **do not require a closing tag**. They are pretty much **self-contained**. Although, some tags do require a **starting tag with attributes** that govern their behaviour.
 
 - Here is an example of an image element which is a void element: `<img>`, `<link>`, `<hr>`, `<br>`
 
 
-While many code formatters like _Prettier_, will choose to include the `/` in void elements (`<img />`), the HTML spec states that the presence of the `/` "does not mark the start tag as self-closing but instead is *unnecessary* and has no effect of any kind".
+`Note`: While many code formatters like _Prettier_, will choose to include the `/` in void elements (`<img />`), the HTML spec states that the presence of the `/` "does not mark the start tag as self-closing but instead is *unnecessary* and has no effect of any kind".
 
 &nbsp;
 
@@ -193,7 +193,7 @@ in other words, *<u>links</u>*
 
 3. `:hover` state applies when a user is **hovering cursor over a link**. This state is helpful for providing extra **attention** to a link, to ensure a user actually intends to click it.
 
-4. `:focus` state applies when we **focus on a link**. (Optional)
+4. `:focus` state applies when we **focus on a link**. (*Optional*, but helpful for when **navigating the site with keyboard**.)
 
 5. `:active` state applies to links that are being **activated by the user**. This typically means **clicking on the link with the primary mouse button** by left clicking, in most cases. This state can be helpful for showing a user that the element they clicked on is *interactive*. 
 
