@@ -163,6 +163,28 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
 
 &nbsp;
 
+## Anchor Tags (`<a></a>`) 
+
+in other words, *<u>links</u>*
+
+```html
+<a href="https://freecodecamp.org" target="_blank">Visit freeCodeCamp</a>
+```
+
+### `target` attributes
+
+1. `_self`, which is the **default value**. This opens the link in the **current browsing context**. In most cases, this will be the **current tab** or **window**.
+
+2. `_blank`, which opens the link in a **new browsing context**. Typically, this will open in a **new tab**. But some users might configure their browsers to open a **new window** instead.
+
+3. ` _parent`, which opens the link in the **parent of the current context**. For example, if your website has an `iframe`, a `_parent` value in that `iframe` would open in your website's tab/window, **not in the embedded frame**. 
+
+4. `_top`, which opens the link in **the top-most browsing context** - think **"the parent of the parent"**. This is similar to `_parent`, but the link will always open in the full **browser tab/window**, even for nested embedded frames. 
+
+5. `_unfencedTop`, which is currently used for the **experimental FencedFrame API**. At the time of this lesson, you probably won't have a reason to use this one yet.
+
+&nbsp;
+
 ## Search Engine Optimization (`SEO`) 
 
 A practice that optimizes web pages so they become **more visible** and **rank higher** on **search engines**.
