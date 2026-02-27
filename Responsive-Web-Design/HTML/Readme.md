@@ -185,6 +185,24 @@ in other words, *<u>links</u>*
 
 &nbsp;
 
+### Link States
+
+1. `:link` represents a link which the user has **not visited, clicked, or interacted with yet**. 
+
+2. `:visited` state applies when a user has already **visited the page** being linked to. By default, this turns the link **purple** - but you can leverage *CSS* to provide a different visual indication to the user. 
+
+3. `:hover` state applies when a user is **hovering cursor over a link**. This state is helpful for providing extra **attention** to a link, to ensure a user actually intends to click it.
+
+4. `:focus` state applies when we **focus on a link**. (Optional)
+
+5. `:active` state applies to links that are being **activated by the user**. This typically means **clicking on the link with the primary mouse button** by left clicking, in most cases. This state can be helpful for showing a user that the element they clicked on is *interactive*. 
+
+&nbsp;
+
+`Note`: When you use these states to style your links, **there is a specific order you need to write your CSS in**: `:link`, `:visited`, `:hover`, `:focus`, then `:active`.
+
+&nbsp;
+
 ## Search Engine Optimization (`SEO`) 
 
 A practice that optimizes web pages so they become **more visible** and **rank higher** on **search engines**.
