@@ -35,12 +35,12 @@ it tells browsers that the document is an `HTML5` document.
 
 ## Void Elements
 
-Some HTML *elements* do not have a closing tag. These are known as *void* elements.
+Some HTML elements **do not hold any content**, and therefore they **do not require a closing tag**. They are pretty much **self-contained**. Although, some tags do require a **starting tag with attributes** that govern their behaviour.
 
 - Here is an example of an image element which is a void element: `<img>`, `<link>`, `<hr>`, `<br>`
 
 
-While many code formatters like _Prettier_, will choose to include the `/` in void elements (`<img />`), the HTML spec states that the presence of the `/` "does not mark the start tag as self-closing but instead is *unnecessary* and has no effect of any kind".
+`Note`: While many code formatters like _Prettier_, will choose to include the `/` in void elements (`<img />`), the HTML spec states that the presence of the `/` "does not mark the start tag as self-closing but instead is *unnecessary* and has no effect of any kind".
 
 &nbsp;
 
@@ -92,12 +92,12 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
 
 - Browsers typically add indentation(`&nbsp;`) and sometimes *italicize* the text.
 
-```html
-<p>Paragraph 1</p>
-<p>Paragraph 2</p>
-<blockquote>I think, therefore I am. (Rene Descartes)</blockquote>
-<p>Paragraph 3</p>
-```
+  ```html
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <blockquote>I think, therefore I am. (Rene Descartes)</blockquote>
+  <p>Paragraph 3</p>
+  ```
 
 &nbsp;
 
@@ -115,46 +115,491 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
     ```html 
     <p>This is an &lt;img /&gt; element</p>
     ```
-  - **Named character references** start with an *ampersand* sign (`&`) and end with a *semicolon* (`;`). 
+  - **Named character references** start with an *ampersand* sign (`&`) and end with a *semicolon* (`;`).
+  
+    - `&lt;`
+
+    - `&gt;`
 
   - **Decimal numeric references** starts with an *ampersand* sign (`&`) and *hash* symbol (`#`), followed by one or more *decimal digits*, followed by a *semicolon* (`;`).
 
     - &#60;
 
-    ```html
-    &#60;
-    ```
+      ```html
+      &#60;
+      ```
 
     - &#169;
 
-    ```html
-    &#169;
-    ```
+      ```html
+      &#169;
+      ```
 
     - &#174;
 
-    ```html
-    &#174;
-    ```
+      ```html
+      &#174;
+      ```
 
   - **Hexadecimal numeric reference** starts with an *ampersand* sign (`&`), *hash* symbol (`#`), and the letter `x`. Then it is followed by one or more `ASCII hex` digits and ends with a *semicolon* (`;`).
 
     - &#x3C;
 
-    ```html
-    &#x3C;
-    ``` 
+      ```html
+      &#x3C;
+      ``` 
 
     - &#x20AC; 
       
-    ```html
-    &#x20AC;
-    ```
+      ```html
+      &#x20AC;
+      ```
 
     - &#x03A9;
 
-    ```html
-    &#x03A9;
-    ``` 
+      ```html
+      &#x03A9;
+      ``` 
+
+&nbsp;
+
+## Anchor Tags (`<a></a>`) 
+
+in other words, *<u>links</u>*
+
+```html
+<a href="https://freecodecamp.org" target="_blank">Visit freeCodeCamp</a>
+```
+
+### `target` attributes
+
+1. `_self`, which is the **default value**. This opens the link in the **current browsing context**. In most cases, this will be the **current tab** or **window**.
+
+2. `_blank`, which opens the link in a **new browsing context**. Typically, this will open in a **new tab**. But some users might configure their browsers to open a **new window** instead.
+
+3. ` _parent`, which opens the link in the **parent of the current context**. For example, if your website has an `iframe`, a `_parent` value in that `iframe` would open in your website's tab/window, **not in the embedded frame**. 
+
+4. `_top`, which opens the link in **the top-most browsing context** - think **"the parent of the parent"**. This is similar to `_parent`, but the link will always open in the full **browser tab/window**, even for nested embedded frames. 
+
+5. `_unfencedTop`, which is currently used for the **experimental FencedFrame API**. At the time of this lesson, you probably won't have a reason to use this one yet.
+
+&nbsp;
+
+### Link States
+
+1. `:link` represents a link which the user has **not visited, clicked, or interacted with yet**. 
+
+2. `:visited` state applies when a user has already **visited the page** being linked to. By default, this turns the link **purple** - but you can leverage *CSS* to provide a different visual indication to the user. 
+
+3. `:hover` state applies when a user is **hovering cursor over a link**. This state is helpful for providing extra **attention** to a link, to ensure a user actually intends to click it.
+
+4. `:focus` state applies when we **focus on a link**. (*Optional*, but helpful for when **navigating the site with keyboard**.)
+
+5. `:active` state applies to links that are being **activated by the user**. This typically means **clicking on the link with the primary mouse button** by left clicking, in most cases. This state can be helpful for showing a user that the element they clicked on is *interactive*. 
+
+&nbsp;
+
+`Note`: When you use these states to style your links, **there is a specific order you need to write your CSS in**: `:link`, `:visited`, `:hover`, `:focus`, then `:active`.
+
+&nbsp;
+
+## Search Engine Optimization (`SEO`) 
+
+A practice that optimizes web pages so they become **more visible** and **rank higher** on **search engines**.
+
+- A short **description**
+
+  ```html
+  <meta
+  name="description"
+  content="Discover expert tips and techniques for gardening in small spaces, choosing the right plants, and maintaining a thriving garden."
+  />
+  ```
+
+&nbsp;
+
+### Open Graph (`OG`)
+
+The open graph protocol enables you to **control how your website's content appears** across various **social media** platforms, such as Facebook, LinkedIn, and more.
+
+- `og:title`
+
+  ```html
+  <meta content="freeCodeCamp.org" property="og:title" />
+  ```
+
+- `og:type`
+
+  ```html
+  <meta property="og:type" content="website" />
+  ```
+
+  - Examples of this content include *articles*, *websites*, *videos*, or *music*.
+
+- `og:image`
+
+  ```html
+  <meta
+  content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+  property="og:image"
+  />
+  ```
+
+  - images should be **high quality** with good dimensions and ratios.
+
+- `og:url`
+
+  ```html
+  <meta property="og:url" content="https://www.freecodecamp.org" />
+  ```
+
+  - **Homepage** URL
+
+There are many more `OG` *properties* that you can set, like `description`, `audio`, `video` and `locale`. However, the open graph `url`, `image`, `type`, and `title` are the most important ones to include.
+
+&nbsp;
+
+## Working w/ Audio & Video
+
+The audio and video elements allow you to **add sound and video content** to your HTML documents. 
+
+- The **audio** element supports popular audio formats like `mp3`, `wav`, and `ogg`. 
+
+  ```html
+  <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3"></audio>
+  ```
+
+  If you want to **see the audio player** on the page, then you can add the audio element with the `controls` attribute.
+
+  ```html
+  <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3" controls></audio>
+  ```
+
+  `Note`: Some browsers, such as **Safari**, *may not* display a volume control by default even when the controls attribute is present.
+
+  The `loop` attribute is a boolean attribute that makes the audio replay continuously.
+
+  ```html
+  <audio
+    src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+    loop
+    controls
+  ></audio>
+  ```
+
+  Another attribute you can use is the `muted` attribute. When present in the `audio` element, this boolean attribute will start the audio in a muted state. 
+
+  ```html
+  <audio
+    src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+    loop
+    controls
+    muted
+  ></audio>
+  ```
+
+  When it comes to *audio file types*, there are **differences in which browsers support which type**. To accommodate this, you can use `source` elements inside the `audio` element and the browser will select the first source that it *understands*. 
+
+  ```html
+  <audio controls>
+    <source src="audio.ogg" type="audio/ogg" />
+    <source src="audio.wav" type="audio/wav" />
+    <source src="audio.mp3" type="audio/mpeg" />
+  </audio>
+  ```
+
+  `Note`: The `source` element is a **void element** so it does not have a closing *tag*.
+
+&nbsp;
+
+- The **video** element supports `mp4`, `ogg`, and `webm` formats.
+
+  ```html
+  <video
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+    loop
+    controls
+    muted
+    width="400"
+  ></video>
+  ```
+
+  Add the `autoplay` attribute to the opening video tag so the video plays automatically.
+
+  ```html
+  <video
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+    autoplay
+    loop
+    controls
+    muted
+    width="400"
+  ></video>
+  ```
+
+  If you wanted to display an image while the video is downloading, you can use the `poster` attribute. 
+
+  ```html
+  <video
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+    loop
+    controls
+    muted
+    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+    width="400"
+  ></video>
+  ```
+
+  You can also use the `source` element inside a `video` element, just like you did with the `audio` element. This lets you provide the same video in **multiple formats**, and the browser will choose the first one it can play.
+
+  ```html
+  <video
+    controls
+    width="400"
+    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  >
+    <source
+      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+      type="video/mp4"
+    />
+    <source
+      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.webm"
+      type="video/webm"
+    />
+    Your browser does not support the video tag.
+  </video>
+  ```
+
+  **MIME** (Multipurpose Internet Mail Extensions) is a standard to describe documents in other forms besides ASCII text, for example, audio, video, and images. (`type="video/mp4"`, `type="video/webm"`, `type="video/ogg"`, `type="video/quicktime"`, etc.)
+
+&nbsp;
+
+## Working w/ images & SVGs
+
+There are 3 things to consider while working with images.
+
+1. Size
+
+    A smaller resolution results in a smaller file size. (duh?)
+
+      - ideally, your images should be the **same scale as the rendered size** on the page. 
+
+2. Format 
+
+    - **Raster formats**, i.e, **pixel-based**, with the **data tracking the color value in each pixel**. They **do not** *upscale* well. 
+
+      1. PNG
+      2. JPG
+
+    - Modern & Web Optimized Formats
+
+      1. SVG
+      2. WEBP
+      3. AVIF
+
+3. Compression
+
+    **Lossless** means that the **original data can be perfectly reconstructed** from the compressed data. 
+    
+    - if you try to compress a `JPG` image, it will result in a degraded quality since it is not lossless. 
+
+&nbsp;
+
+### image Licenses
+
+images are considered **intellectual property**, this means that they are **protected by copyright** regulations, most often belonging to the creator. **By default, images are released as all rights reserved**. The creator, or publisher sometimes, holds all copyright for the image.
+
+- Obtain written **permission** from the copyright holder.
+
+- **Purchase** a license from the copyright holder.
+
+- incorporate the image in a way that falls under **fair use**.
+
+    - Some examples of fair use would be to comment on, or review the art, or create a parody of the image.
+
+#### Permissive Licenses
+
+- Creative Commons license
+
+- BSD license
+
+An image under the **public domain** has no copyright attached to it and is free to be used **without any restrictions**.
+
+- images licensed specifically under the Creative Commons 0 (`CC0`) license are considered *public domain*.
+
+&nbsp;
+
+There are also sites like **Pixabay** and **Unsplash**, which offer `free-to-use` images. 
+
+&nbsp;
+
+`Note`: Always **be mindful of the copyright and licensing** when you use an image in your website.
+
+&nbsp;
+
+### Scalable Vector Graphic (`SVG`)
+
+A vector graphic **tracks data based on paths and equations** to plot *points*, *lines*, and *curves*.
+
+- Can be **scaled to any size** without impacting the quality.
+
+- Generally used for *icons* and *logos*.
+
+&nbsp;
+
+SVGs specifically have the added benefit of storing data in `XML`. This means you can use them directly in your code as raw `HTML` with the `svg` element. It also means you can **programmatically change the attributes** of the image.
+
+```html
+<!-- This will display a smily face 🙂 -->
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="45" stroke="black" stroke-width="4" fill="yellow" />
+  <circle cx="35" cy="40" r="5" fill="black" />
+  <circle cx="65" cy="40" r="5" fill="black" />
+  <path d="M35 65 Q50 80 65 65" stroke="black" stroke-width="4" fill="transparent" />
+</svg>
+```
+
+Each SVG element has **attributes that control its appearance and position** within the drawing area.
+
+- The `svg` element is the **container for the whole drawing**. It sets up the space where all the shapes appear. Everything you want to draw with SVG, such as *circles*, *lines*, or *paths*, goes inside the svg element.
+
+- The `circle` element is used to **make the face and the eyes**. One large circle forms the yellow face, and two smaller circles make the eyes.
+
+- The `path` element is used to **draw the smile**. It creates a *curved line* for the mouth.
+
+&nbsp;
+
+Here are some more examples of SVGs
+
+```html
+<!-- Star Icon -->
+<svg width="50" height="50" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 2L14.9 8.6L22 9.3L17 14.1L18.3 21.2L12 17.8L5.7 21.2L7 14.1L2 9.3L9.1 8.6L12 2Z"/>
+</svg>
+
+<!-- Heart Icon -->
+<svg width="50" height="50" viewBox="0 0 24 24" fill="crimson" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 6 4 4 6.5 4C8 4 9.5 4.8 10.5 6.09C11.5 4.8 13 4 14.5 4C17 4 19 6 19 8.5C19 12.28 15.6 15.36 10.45 20.04L12 21.35Z"/>
+</svg>
+
+<!-- Checkmark Icon -->
+<svg width="50" height="50" viewBox="0 0 24 24" fill="green" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20.29 5.71L9 17L3.71 11.71L5.12 10.29L9 14.17L18.88 4.29L20.29 5.71Z"/>
+</svg>
+```
+
+&nbsp;
+
+`Note`: SVGs allow you to adapt your layout to any **responsive design** you need.
+
+&nbsp;
+
+## Replaced Elements
+
+An element whose **content is determined by an external resource** rather than by CSS itself. 
+
+- `img`
+
+- `iframe`
+
+- `video`
+
+With replaced elements, you can **control** the **position**, or **layout** of an element. But your **CSS cannot directly modify the content** of that element. 
+
+```html
+<img src="example-img-url" alt="Descriptive text goes here">
+```
+
+`Note`: You can **control how it appears**, but you **cannot modify the image** itself. 
+
+&nbsp;
+
+### inline frame (`iframe`)
+
+it **embeds an external site** on your web page.
+
+- Embedded YouTube Video
+
+  ```html
+  <iframe 
+    width="400" 
+    height="200" 
+    src="https://www.youtube.com/embed/ApXoWvfEYVU"
+    title="Post Malone, Swae Lee - Sunflower (Spider-Man: Into the Spider-Verse)"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen
+  ></iframe>
+  ```
+
+  - The `allow` attribute lets you define **what an `iframe` can or can't do**. This is called an **allowlist**.
+
+  - items in an **allowlist** can be separated by **semicolons**(`;`) or **spaces**(` `), and **both can be used together**. 
+
+  - `accelerometer` lets the `iframe` use **motion sensors** so it can detect things like device **tilting and rotation**.
+
+  - `clipboard-write` allows the embedded page to **write items to user's clipboard**.
+
+  - `encrypted-media` allows the use of **encrypted media extensions** to protect the video.
+
+  - `gyroscope` allows access to the device’s **motion and orientation** sensors.
+
+  - `web-share` allows sharing the iframe content through the device's **native share dialogs**. 
+
+  - `referrerpolicy` is the rule that determines **how much detail you share** when your page connects to another page. 
+
+- Embedded Map
+
+  ```html
+  <iframe
+    title="Map of the Royal Observatory, Greenwich, London"
+    width="300"
+    height="200"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik"
+  ></iframe>
+  ```
+
+  - You can also replace the url with the site of your choosing. Like, `https://skywalkersam.dev`
+
+The element itself is **replaced with** the external object: **the site**. Your CSS can **change the positioning** of the embedded site, but **you cannot modify the site's contents**. To dive a bit further, if the embedded site has an `h1` element, your CSS would not be able to style that `h1` element. You cannot change the size, font color, and so on.
+
+&nbsp;
+
+### Other Replaced Elements
+
+There are some other replaced elements, such as `video`, and `embed`. And **some elements behave as replaced elements under specific circumstances**. 
+
+- Here's an example of an `input` element with the `type` attribute set to `image`:
+
+  ```html
+  <input type="image" alt="Descriptive text goes here" src="example-img-url">
+  ```
+
+  - This type of `input` is **considered to be a replaced element**, but other `input` types like `text`, or `email` are **not replaced elements**.
+
+`Note`: if you want to **embed direct HTML within the iframe** element you have to use the `srcdoc` attribute instead of `src`.
+
+&nbsp;
+
+## 
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;
+
+
+
+
+
+
+
 
 &nbsp;
