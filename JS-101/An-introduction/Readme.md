@@ -8,6 +8,8 @@ w/ freeCodeCamp.org
 
 - A `method` is a *type of function* that is associated with an `object`, meaning it operates on the data contained *within that object*.
 
+- An `argument` is a `value` you give to a `function` or `method` when you call it, **enabling that function or method** to perform its task using the **specific information you provide**.  
+
 - A **compiler** translates high-level programming language code into **machine-readable** code, which creates an **executable** file.
 
 &nbsp;
@@ -246,9 +248,9 @@ In JavaScript, strings are treated as sequences of characters, and `each charact
 
 &nbsp;
 
-## Escape Sequence Characters
+### Escape Sequence Characters
 
-### New line (`\n`)
+#### New line (`\n`)
 - in many programming languages, including JavaScript, you can create **a newline in a string** using a special character called an `escape sequence`. The most common escape sequence for *newlines* is `\n`.
 
   ```js
@@ -261,8 +263,9 @@ In JavaScript, strings are treated as sequences of characters, and `each charact
   let poem = "Roses are red,\nViolets are blue,\nJavaScript is fun,\nAnd so are you.";
   console.log(poem);
   ```
+&nbsp;
 
-### inner Quote (`\"`)
+#### inner Quote (`\"`)
 
 ```js
 let statement = "She said, "Hello!""; //This will throw an error.(
@@ -270,8 +273,9 @@ let statement = "She said, "Hello!""; //This will throw an error.(
 let statement = "She said, \"Hello!\"";
 console.log(statement); // She said, "Hello!"
 ```
+&nbsp;
 
-### Single Quote (`\'`)
+#### Single Quote (`\'`)
 
 ```js
 let quote = 'It\'s a beautiful day!';
@@ -282,9 +286,117 @@ console.log(quote); // It's a beautiful day!
 
 &nbsp;
 
-## Template Literals
+### Template Literals ( `` ) & String interpolation (`${}`)
 
-Unlike regular strings, which use single (`'`) or double (`"`) quotes, &**template literals** are defined with *backticks* **( ` )**.
+Unlike regular strings, which use single (`'`) or double (`"`) quotes, **template literals** are defined with **backticks ( `` )**.
+
+**String interpolation** allows you to **embed variables and expressions inside a string**. 
+
+```js
+const name = "Alice";
+const age = 25;
+const message = `My name is ${name} and I am ${age} years old.`;
+
+console.log(message); 
+```
+
+- Easier string manipulation.
+
+- Clean, concise, and **easier to read**.
+
+- Support **multi line** strings.
+
+  - With **regular strings**, you would need to use escape characters (`\n`) to create new lines. With **template literals**, you can simply write the string across multiple lines, and the **formatting is preserved**: 
+
+  ```js
+  let poem = `Roses are red,
+  Violets are blue,
+  JavaScript is fun,
+  And so are you.`;
+
+  console.log(poem);
+  ```
+
+- A **powerful** and **flexible** way to work with strings.
+
+  - Embed **JavaScript expressions directly within the string**, like in this example:
+
+  ```js
+  const song = "Bohemian Rhapsody";
+  const score = 9.5;
+  const highestScore = 10;
+  const output = `One of my favorite songs is "${song}". I rated it ${
+    (score / highestScore) * 100
+  }%.`;
+
+  console.log(output); 
+  ```
+
+&nbsp;
+
+### `indexOf()`
+
+To **locate** the position of a **substring** inside of a *string*. it returns the **initial position** of the string starting with the index of `0`.
+```js
+let sentence = "JavaScript is awesome!";
+let position = sentence.indexOf("awesome!");
+
+console.log(position); // 14
+```
+- if the substring is **not found**, `indexOf()` returns `-1`.
+
+  ```js
+  let sentence = "JavaScript is awesome!";
+  let position = sentence.indexOf("fantastic");
+
+  console.log(position); // -1
+  ```
+
+- You can also specify **where to begin** searching within the string by providing a **second argument** to `indexOf()`.
+
+  ```js
+  let sentence = "JavaScript is awesome, and JavaScript is powerful!";
+  let position = sentence.indexOf("JavaScript", 10);
+
+  console.log(position); // 27
+  ```
+
+- The `indexOf()` method is **case sensitive**.
+
+  ```js
+  console.log("freeCodeCamp".indexOf("F")) // -1
+  ```
+
+&nbsp;
+
+### `prompt()` Method
+
+One of the simplest ways to **get input from a user** through a small **pop-up dialog** box.
+
+```js
+prompt(message, default);
+```
+
+- Basic Example
+
+  ```js
+  const btn = document.getElementById("prompt-btn");
+  const output = document.getElementById("output");
+
+  btn.addEventListener("click", () => {
+    const userName = prompt("What is your name?", "User");
+    output.textContent = "Hello, " + userName + "!";
+  });
+  ```
+  - Returns the input as a **string**.
+
+  - `null` signifies that the user **did not** provide any **input**. 
+
+  - `prompt()` method will **halt the execution** of the script **until the user interacts** with the *dialog box*.
+
+&nbsp;
+
+`Note`: While `prompt()` is useful for **quick testing** or **small applications**, it's generally **avoided** in modern, complex web applications due to its **disruptive nature** and **inconsistent behavior** across different *browsers*.
 
 &nbsp;
 
@@ -306,6 +418,8 @@ Just as a period (`.`) marks the **end of a sentence** in *English*, a semicolon
 Without the semicolon, the JavaScript engine *might** have trouble interpreting where one statement ends and another begins.
 
 - Semicolons help **prevent ambiguities** in code execution and ensure that statements are *correctly terminated*.
+
+&nbsp;
 
 `Note`: While JavaScript has Automatic Semicolon Insertion (**ASI**) that can add semicolons automatically, explicitly including them improves code clarity and helps prevent errors that may arise from *unexpected* ASI behavior.
 
@@ -335,6 +449,8 @@ Any line of code that is *commented* out is **ignored** by the JavaScript engine
 ```
 
 While comments are **useful** in programming, it is important to **avoid over-commenting**. You don't need to comment on every single line of code, especially if the code is straightforward and self-explanatory.
+
+&nbsp;
 
 `Note`: The goal is to **enhance readability**, **do not clutter** the code with *unnecessary* explanations.
 
@@ -397,7 +513,7 @@ While comments are **useful** in programming, it is important to **avoid over-co
 
 &nbsp;
 
-## Using the `typeof` Operator
+## `typeof` Operator
 
 The typeof operator is used to **check the data type of a variable**. it returns a *string* indicating the *type* of the variable.
 
@@ -423,3 +539,21 @@ console.log(typeof isLoggedIn); // "boolean"
 &nbsp;
 
 ## 
+
+
+
+
+
+
+
+
+
+
+&nbsp;
+
+
+
+
+
+
+&nbsp;
