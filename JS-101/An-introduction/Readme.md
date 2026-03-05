@@ -400,6 +400,40 @@ prompt(message, default);
 
 &nbsp;
 
+## American Standard Code for Information Interchange (`ASCII`)
+
+ASCII is **a system for encoding characters** such as letters, digits, and symbols into *numerical* values. **Each character is mapped to a specific number.** 
+
+- For example, `A` is represented by the number `65`, while `a` is represented by `97`.
+
+- JavaScript strings use Unicode (`UTF-16`) internally, ASCII values match the first `128` Unicode characters.
+
+  - Uppercase and lowercase English letters (`A-Z`, `a-z`).
+  - Numbers (`0-9`).
+  - Common punctuation marks and symbols (`!`, `@`, `#`, and *so on*).
+  - Control characters (such as **newline** and **tab**). 
+
+in JavaScript, you can access the **numeric code of a character** using the `charCodeAt()` method. This method **returns the UTF-16 code** unit of the character at a specified **index**. For the first `128` *characters*, this value matches the ASCII code.
+
+```js
+let letter = "A";
+console.log(letter.charCodeAt(0));  // 65
+```
+
+The `fromCharCode()` method allows you to do the **opposite**: convert a **UTF-16** code unit (which matches ASCII for basic characters) into its **corresponding character**.
+
+```js
+let char = String.fromCharCode(65);
+console.log(char);  //  A
+
+let char = String.fromCharCode(97);
+console.log(char);  // a
+```
+
+`Note`: These methods are particularly useful when you need to **manipulate or compare characters based on their numeric code values**.
+
+&nbsp;
+
 ## A Semicolon (`;`)
 
 Semicolons are primarily used to **mark the end of a statement**. This helps the JavaScript engine understand **the separation of individual instructions**, which is crucial for correct execution and termination.
