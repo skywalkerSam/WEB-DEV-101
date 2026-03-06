@@ -398,7 +398,7 @@ prompt(message, default);
 
 `Note`: While `prompt()` is useful for **quick testing** or **small applications**, it's generally **avoided** in modern, complex web applications due to its **disruptive nature** and **inconsistent behavior** across different *browsers*.
 
-&nbsp;
+&nbsp;f
 
 ## American Standard Code for Information Interchange (`ASCII`)
 
