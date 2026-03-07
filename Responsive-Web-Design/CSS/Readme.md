@@ -222,4 +222,73 @@ You can use it for creating layouts that require both **alignment** and **dimens
 
   - Shorthand rules are the same as the margin ones.
 
+&nbsp;
 
+## CSS Specificity
+
+CSS Specificity determines **which styles are applied** to an element **when multiple rules** could apply.
+
+CSS specificity is **calculated** based on the **type of selectors** used, and by a *four-part* value `(a, b, c, d)`:
+
+- `a`: inline styles (`1` or `0`).
+
+- `b`: Number of `ID` selectors.
+
+- `c`: Number of `class` selectors, `attribute` selectors, and `pseudo-classes`.
+
+- `d`: Number of `type` selectors, `pseudo-elements`, and `universal` selectors.
+
+**Each part** of the specificity *value* carries **different weight**:
+
+1. **inline styles** (`a`) have the **highest** weight, contributing a value of `1` to the **first** part of the specificity value.
+
+2. **ID selectors** (`b`) carry the **higher** weight, with each `id` contributing `1` to the **second** part of the specificity value.
+
+3. **Class selectors**, **attribute selectors**, and **pseudo-classes** (`c`) carry **moderate** weight, with each contributing `1` to the **third** part of the specificity value.
+
+4. **Type selectors** and **pseudo-elements** (`d`) have the **lowest** weight, with each contributing `1` to the **fourth** part of the specificity value.
+
+- **Universal selector** (`*`): The universal selector contributes `0` to the specificity calculation and **does not affect specificity**. it's inclusion in a selector **does not change the specificity value**.
+
+&nbsp;
+
+`Note`: **inline** CSS has the **highest** specificity because it is *applied directly to the element*. it **overrides** any internal or external CSS. The *specificity value* for inline styles is `(1, 0, 0, 0)`.
+
+&nbsp;
+
+### internal CSS
+
+internal CSS is defined within a `style` element in the `head` section of the HTML document. it has **lower specificity than inline styles** but can **override** external styles.
+
+The *specificity value for internal styles* is determined by the *selectors used*. 
+
+- For example, an `ID` selector within **internal** CSS has a specificity value of `(0, 1, 0, 0)`.
+
+&nbsp;
+
+### External CSS 
+
+External CSS is linked via a `link` element in the `head` section and is written in separate `.css` files. it has the **lowest** specificity but provides the best **maintainability for larger projects**.
+
+The *specificity value for external styles* is also determined by the *selectors used*.
+
+- For example, a `class` selector within **external** CSS has a specificity value of `(0, 0, 1, 0)`.
+
+&nbsp;
+
+## 
+
+
+
+
+
+
+
+
+
+&nbsp;
+
+
+
+
+&nbsp;
