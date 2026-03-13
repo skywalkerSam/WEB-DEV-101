@@ -369,7 +369,75 @@ console.log(position); // 14
 
 &nbsp;
 
-### `prompt()` Method
+### `includes()` method
+
+The `includes()` method is used to check **if a string contains a specific substring**. If the substring is found within the string, the method returns `true` otherwise, it returns `false`.
+
+- **Case-sensitive**
+
+```js
+let phrase = "JavaScript is awesome!";
+let result = phrase.includes("awesome");
+
+console.log(result);  // true
+
+let phrase = "JavaScript is awesome!";
+let result = phrase.includes("Awesome");
+
+console.log(result);  // false
+```
+
+- You can also use the `includes()` method to check for a substring starting at a specific `index` in the string by providing a second parameter:
+
+  ```js
+  let text = "Hello, JavaScript world!";
+  let result = text.includes("JavaScript", 7);
+
+  console.log(result);  // true
+  ```
+
+&nbsp;
+
+### `slice()` method
+
+The `slice()` method allows you to **extract a portion of a string** and **returns a new string**, without modifying the original string. 
+
+- it takes two parameters: the **starting** index and the *optional* **ending** index.
+
+  ```js
+  string.slice(startIndex, endIndex);
+  ```
+
+```js
+let message = "Hello, world!";
+let greeting = message.slice(0, 5);
+
+console.log(greeting);  // Hello
+```
+
+- if you **omit the second parameter**, `slice()` will extract everything **from the start index to the end** of the string:
+
+  ```js
+  let message = "Hello, world!";
+  let world = message.slice(7);
+
+  console.log(world);  // world!
+  ```
+
+- You can also use **negative numbers as indexes**. When you use a negative number, it **counts backward from the end** of the string:
+
+  ```js
+  let message = "JavaScript is fun!";
+  let lastWord = message.slice(-4);
+
+  console.log(lastWord);  // fun!
+  ```
+
+
+
+&nbsp;
+
+## `prompt()` Method
 
 One of the simplest ways to **get input from a user** through a small **pop-up dialog** box.
 
@@ -398,7 +466,7 @@ prompt(message, default);
 
 `Note`: While `prompt()` is useful for **quick testing** or **small applications**, it's generally **avoided** in modern, complex web applications due to its **disruptive nature** and **inconsistent behavior** across different *browsers*.
 
-&nbsp;f
+&nbsp;
 
 ## American Standard Code for Information Interchange (`ASCII`)
 
