@@ -117,7 +117,7 @@ in **statically typed** languages like `C#` or `C++`, **you must declare the dat
 
 &nbsp;
 
-### `let`
+## `let`
 
 - The `let` keyword allows you to declare variables that can be updated or reassigned later.
 
@@ -130,7 +130,7 @@ in **statically typed** languages like `C#` or `C++`, **you must declare the dat
 
 &nbsp;
 
-### `const`
+## `const`
 
 - const is used to declare variables that are **constant**.
 
@@ -248,9 +248,9 @@ In JavaScript, strings are treated as sequences of characters, and `each charact
 
 &nbsp;
 
-### Escape Sequence Characters
+## Escape Sequence Characters
 
-#### New line (`\n`)
+### New line (`\n`)
 - in many programming languages, including JavaScript, you can create **a newline in a string** using a special character called an `escape sequence`. The most common escape sequence for *newlines* is `\n`.
 
   ```js
@@ -265,7 +265,7 @@ In JavaScript, strings are treated as sequences of characters, and `each charact
   ```
 &nbsp;
 
-#### inner Quote (`\"`)
+### inner Quote (`\"`)
 
 ```js
 let statement = "She said, "Hello!""; //This will throw an error.(
@@ -275,7 +275,7 @@ console.log(statement); // She said, "Hello!"
 ```
 &nbsp;
 
-#### Single Quote (`\'`)
+### Single Quote (`\'`)
 
 ```js
 let quote = 'It\'s a beautiful day!';
@@ -286,7 +286,7 @@ console.log(quote); // It's a beautiful day!
 
 &nbsp;
 
-### Template Literals ( `` ) & String interpolation (`${}`)
+## Template Literals ( `` ) & String interpolation (`${}`)
 
 Unlike regular strings, which use single (`'`) or double (`"`) quotes, **template literals** are defined with **backticks ( `` )**.
 
@@ -334,7 +334,7 @@ console.log(message);
 
 &nbsp;
 
-### `indexOf()`
+## `indexOf()`
 
 To **locate** the position of a **substring** inside of a *string*. it returns the **initial position** of the string starting with the index of `0`.
 ```js
@@ -369,7 +369,7 @@ console.log(position); // 14
 
 &nbsp;
 
-### `includes()` method
+## `includes()` method
 
 The `includes()` method is used to check **if a string contains a specific substring**. If the substring is found within the string, the method returns `true` otherwise, it returns `false`.
 
@@ -398,7 +398,7 @@ console.log(result);  // false
 
 &nbsp;
 
-### `slice()` method
+## `slice()` method
 
 The `slice()` method allows you to **extract a portion of a string** and **returns a new string**, without modifying the original string. 
 
@@ -433,7 +433,88 @@ console.log(greeting);  // Hello
   console.log(lastWord);  // fun!
   ```
 
+&nbsp;
 
+## `toUpperCase()`
+
+The `toUpperCase()` method **converts all the characters to uppercase** letters and **returns a new string** with all uppercase characters.
+
+```js
+let greeting = "Hello, World!";
+let uppercaseGreeting = greeting.toUpperCase();
+
+console.log(uppercaseGreeting);  // "HELLO, WORLD!"
+```
+
+&nbsp;
+
+## `toLowerCase()`
+
+The `toLowerCase()` method **converts all characters in a string to lowercase**. 
+
+- Standardize input, such as when comparing **user-provided** text or making **case-insensitive** checks.
+
+```js
+let shout = "I AM LEARNING JAVASCRIPT!";
+let lowercaseShout = shout.toLowerCase();
+
+console.log(lowercaseShout);  // "i am learning javascript!"
+```
+
+&nbsp;
+
+## Trim Whitespace from a String
+
+
+When working with strings in JavaScript, it's common to encounter **unwanted whitespace** at the beginning or end of a string. Whitespace can **interfere with operations** like **comparison**, **storage**, or **display**,
+
+- Whitespace refers to **spaces**, **tabs**, or **line breaks** that occur in a string but are **not visible characters**.
+
+&nbsp;
+
+### `trim()`
+
+The `trim()` method is the most commonly used way to **remove whitespace** from both **the beginning** and **the end** of a string.
+
+- Removes all the leading and trailing spaces.
+
+```js
+let message = "   Hello!   ";
+console.log(message); // "   Hello!   "
+
+let trimmedMessage = message.trim();
+console.log(trimmedMessage);  // "Hello!"
+```
+
+`Note`: Any whitespace **within the string** (*between words*) is left **untouched** by `trim()`.
+
+&nbsp;
+
+### `trimStart()`
+
+`trimStart()` removes whitespace from the **beginning** (*start*) of the string.
+
+```js
+let greeting = "   Hello!   ";
+console.log(greeting);  // "   Hello!   "
+
+let trimmedStart = greeting.trimStart();
+console.log(trimmedStart);  // "Hello!   "
+```
+
+&nbsp;
+
+### `trimEnd()`
+
+`trimEnd()` removes whitespace from the **end of the string**.
+
+```js
+let greeting = "   Hello!   ";
+console.log(greeting);  // "   Hello!   "
+
+let trimmedEnd = greeting.trimEnd();
+console.log(trimmedEnd);  // "   Hello!"
+```
 
 &nbsp;
 
