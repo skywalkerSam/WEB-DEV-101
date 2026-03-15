@@ -163,21 +163,21 @@ MAX_SIZE = 200; // This will result in an error
 
 ## "Strings"
 
-1. Strings are **sequences of characters** enclosed in **quotes**. They can be created using *single quotes* and *double quotes*.
+A string is a **sequence of characters** wrapped in either **single quotes** (`''`), **double quotes** (`""`) or **backticks** (``).
+
+- Strings are **primitive** data types, and they are **immutable**.
+
+  ```js
+  let correctWay = 'This is a string';
+  let alsoCorrect = "This is also a string";
+  ```
+
+- **immutability** means that once a string is **created**, you **cannot change the characters** in the string. However, you can still **reassign strings** to a *new value*.
 
     ```js
-    let correctWay = 'This is a string';
-   let alsoCorrect = "This is also a string";
-   ```
-
-2. `Strings` are **immutable**. 
-
-    - This means that once a string is *created*, you **cannot change the characters** in the string. However, you can still **reassign strings** to a *new value*.
-
-      ```js
-      let firstName = "Sam";
-      firstName = "Sammy"; // Reassigning the string to a new value
-      ```
+    let firstName = "Sam";
+    firstName = "Sammy"; // Reassigning the string to a new value
+    ```
 
 &nbsp;
 
@@ -250,7 +250,7 @@ In JavaScript, strings are treated as sequences of characters, and `each charact
 
 ## Escape Sequence Characters
 
-### New line (`\n`)
+### `\n` (Newline Character)
 - in many programming languages, including JavaScript, you can create **a newline in a string** using a special character called an `escape sequence`. The most common escape sequence for *newlines* is `\n`.
 
   ```js
@@ -265,7 +265,7 @@ In JavaScript, strings are treated as sequences of characters, and `each charact
   ```
 &nbsp;
 
-### inner Quote (`\"`)
+### Escaping String: `\"` (inner Quote)
 
 ```js
 let statement = "She said, "Hello!""; //This will throw an error.(
@@ -275,7 +275,7 @@ console.log(statement); // She said, "Hello!"
 ```
 &nbsp;
 
-### Single Quote (`\'`)
+### Escaping String: `\'` (Single Quote)
 
 ```js
 let quote = 'It\'s a beautiful day!';
@@ -286,11 +286,9 @@ console.log(quote); // It's a beautiful day!
 
 &nbsp;
 
-## Template Literals ( `` ) & String interpolation (`${}`)
+## Template Literals (``) & String interpolation (`${}`)
 
-Unlike regular strings, which use single (`'`) or double (`"`) quotes, **template literals** are defined with **backticks ( `` )**.
-
-**String interpolation** allows you to **embed variables and expressions inside a string**. 
+Template Strings are defined with backticks (``). They allow for **easier string manipulation**, including **embedding variables and expressions** directly inside a *string*, a feature known as ***string interpolation***.
 
 ```js
 const name = "Alice";
@@ -300,11 +298,7 @@ const message = `My name is ${name} and I am ${age} years old.`;
 console.log(message); 
 ```
 
-- Easier string manipulation.
-
-- Clean, concise, and **easier to read**.
-
-- Support **multi line** strings.
+- Supports **multi-line** strings.
 
   - With **regular strings**, you would need to use escape characters (`\n`) to create new lines. With **template literals**, you can simply write the string across multiple lines, and the **formatting is preserved**: 
 
@@ -518,7 +512,82 @@ console.log(trimmedEnd);  // "   Hello!"
 
 &nbsp;
 
-## `prompt()` Method
+## `replace()` method
+
+The `replace()` method in JavaScript allows you to **find** a specified value (like a **word** or **character**) in a string and **replace** it with another value. The method **returns** a *new string* with the replacement and leaves the original unchanged.
+
+```js
+string.replace(searchValue, newValue);
+```
+
+- Case-sensitive
+
+- `searchValue` is the value you want to *search* for in the string. It can be either a **string** or a regular expression (**regex**), which describes patterns in text.
+
+- The `newValue` is the value that will **replace** the `searchValue`.
+
+  ```js
+  let text = "I love JavaScript!";
+  console.log(text); // "I love JavaScript!"
+
+  let newText = text.replace("JavaScript", "Elixir");
+  console.log(newText);  // "I love Elixir!"
+  ```
+
+`Note`: By default, the `replace()` method will only **replace the first occurrence** of the `searchValue`.
+
+&nbsp;
+
+### `replaceAll()` method
+
+it replaces all of the occourences of the `searchValue`.
+
+&nbsp;
+
+## `repeat()` method
+
+The `repeat()` method is a built-in function in JavaScript that allows you to **repeat a string a specified number of times**. it is used for **string duplication**.
+
+```js
+string.repeat(count);
+```
+
+- `string` is the string that you want to **repeat**, and `count` is the *number of times* you want the string to be repeated.
+
+  ```js
+  let word = "Hello!";
+  let repeatedWord = word.repeat(3);
+  console.log(repeatedWord);  // "Hello!Hello!Hello!"
+  ```
+
+- The `count` parameter must be a **non-negative** number. if you pass a negative number, JavaScript will throw a `RangeError`.
+
+  ```js
+  let word = "Test";
+  console.log(word.repeat(-1));  // Throws RangeError: Invalid count value
+  ```
+
+- The `count` must be a **finite** number. if you try to repeat a string an ***infinite*** number of times or use `Infinity` as the count, you will also get a `RangeError`.
+
+  ```js
+  let word = "Test";
+  console.log(word.repeat(Infinity));  // Throws RangeError: Invalid count value
+  ```
+
+  - in JavaScript, `Infinity` is a special value that represents an **infinite quantity**. it is used to denote numbers that are *larger than any finite number*.
+
+- if the count is **not an integer** (such as a *decimal* like `2.5`), the `repeat()` method will **round** it down to the nearest integer.
+
+  ```js
+  let word = "Test";
+  console.log(word.repeat(2.5));  // "TestTest"
+  ```
+
+- if you pass `0` as the `count`, the `repeat()` method will return an empty string (`""`).
+
+&nbsp;
+
+## `prompt()` method
 
 One of the simplest ways to **get input from a user** through a small **pop-up dialog** box.
 
@@ -551,7 +620,9 @@ prompt(message, default);
 
 ## American Standard Code for Information Interchange (`ASCII`)
 
-ASCII is **a system for encoding characters** such as letters, digits, and symbols into *numerical* values. **Each character is mapped to a specific number.** 
+ASCII is **a system for encoding characters** such as letters, digits, and symbols into **numerical** values. 
+
+- Each **character** is mapped to a **specific** number.
 
 - For example, `A` is represented by the number `65`, while `a` is represented by `97`.
 
