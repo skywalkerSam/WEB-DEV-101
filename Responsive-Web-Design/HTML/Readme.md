@@ -694,6 +694,38 @@ Finally, depending on how **incorrect** your structure is, your HTML may not eve
 
 &nbsp;
 
+## `<i></i>` vs `<em></em>`
+
+`i` is used for highlighting **alternative voice** or **mood**, **idiomatic terms** from **another language**, **technical terms**, and **thoughts**.
+
+```html
+<p>There is a certain <i lang="fr">je ne sais quoi</i> in the air.</p>
+```
+
+- it was originally used for **presentational** purposes to display the text in ***italics***.
+
+- The `i` element does not indicate if the text is important or not, it only shows that it's *somehow different from the surrounding text*.
+
+&nbsp;
+
+`em` is used to *emphasize* the **importance** of the text. You should use this element for parts of the text that *require a special emphasis compared to surrounding text*.
+
+```html
+<p>
+  Never give up on <em>your</em> dreams.
+</p>
+```
+
+&nbsp;
+
+`Note`: Even if it looks the same when the text was inside the *idiomatic text* element, the *semantic emphasis* element conveys its **meaning** and **importance** behind the scenes.
+
+&nbsp;
+
+`Note #2`: it's important to know that these elements **should not be used for presentational purposes** only. if you need to display the text in italics, but the text *doesn't* have a special purpose, style, or meaning in the paragraph, you should **use CSS instead**.
+
+&nbsp;
+
 ## 
 
 
@@ -701,9 +733,7 @@ Finally, depending on how **incorrect** your structure is, your HTML may not eve
 
 
 
-
 &nbsp;
-
 
 
 &nbsp;
