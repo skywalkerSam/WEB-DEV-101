@@ -786,7 +786,77 @@ Description lists are perfect for presenting **terms** and **definitions** in an
 
 &nbsp;
 
-##
+## `<blockquote></blockquote>`
+
+The quoted elements are used to **distinguish quoted text from the surrounding content**.
+
+- **Extended** quotations.
+
+- Slightly **indented** text.
+
+- Representing a section **quoted from another source**.
+
+- if the source of the quote has an address, you can cite it with the `cite` **attribute**. The value of this attribute should be a **valid URL**.
+
+  - While this attribute *doesn't* change the presentation of the block quote, it's very *helpful* for giving **screen readers** and **search engines** more information about the quote. 
+
+```html
+<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+  "Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?"
+</blockquote>
+```
+
+- if you want to start and end the block quote with quotation marks (`" "`), you may need to write them **explicitly** within the text.
+
+&nbsp;
+
+### `<cite></cite>` element
+
+if you want to *attribute the source visually*, you can add a citation element, `cite`, *outside of the block quotation element*. 
+
+- This is **different** from the cite *attribute*.
+
+- it is uses to mark up the **title** of a referenced ***creative work*** like a **book**, article, **song**, **film**, **website**, or **research paper**.
+
+```html
+<div>
+  <blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+    Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?
+  </blockquote>
+  <p>—Quincy Larson, <cite>How to Learn to Code and Get a Developer Job [Full Book].</cite></p>
+</div>
+```
+
+&nbsp;
+
+### `<q></q>` (inline quotation)
+
+it is used for **short inline quotations from other sources**.
+
+- Short quotations.
+
+- Quoted text is *part of the paragraph* and it's surrounded by quotation marks (`" "`).
+
+- You can also add a `cite` attribute to *attribute* the source.
+
+```html
+<p>
+  As Quincy Larson said,
+  <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+    Momentum is everything.
+  </q>
+</p>
+```
+
+&nbsp;
+
+`Note`: You should use `blockquote` for **extended quotations** from other sources and inline quotes (`q`) for **short quotations** from other sources that should be part of existing paragraphs.
+
+&nbsp;
+
+## 
+
+
 
 
 
@@ -796,5 +866,5 @@ Description lists are perfect for presenting **terms** and **definitions** in an
 &nbsp;
 
 
-&nbsp;
 
+&nbsp;
