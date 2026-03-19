@@ -929,8 +929,41 @@ The *contact address* element is used to represent **contact information** for a
 
 &nbsp;
 
-## Times & Dates
+## Date & Time
 
+The `time` element is used to represent a specific moment in time.
+
+```html
+<p>
+  The reservations are for <time datetime="20:00">20:00 </time>
+</p>
+```
+
+- The `datetime` attribute is used to *translate* dates and times into a **machine-readable** format.
+
+- Aids *SEO* & browser effectiveness.
+
+- The **value** for the `datetime` attribute must be either a *valid* **year**, valid **month**, valid **time**, local date, global **date**, or **valid duration** *string*.
+
+  ```html
+  <p>
+    The graduation will be on <time datetime="2024-06-15T15:00">June 15</time>
+  </p>
+  ```
+
+  - The value for the `datetime` attribute is in the `ISO 8601` format. ISO 8601 is an **international standard** to represent **dates** and **times**.
+
+  - The **first** part of that **value** is the **year, month and day**. 
+
+  - The capital `T` in the value is a **separator** between the date and time.
+
+&nbsp;
+
+`Note`: Whenever you need to *represent* **events**, publication **dates**, or **appointments**, it is best to use the `time` element.
+
+&nbsp;
+
+## 
 
 
 
@@ -939,7 +972,6 @@ The *contact address* element is used to represent **contact information** for a
 
 
 &nbsp;
-
 
 
 &nbsp;
