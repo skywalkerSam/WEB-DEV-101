@@ -854,7 +854,57 @@ it is used for **short inline quotations from other sources**.
 
 &nbsp;
 
-## 
+## Abbreviations
+
+An abbreviation is a **shortened form** of a word or phrase. it is used for writing **concise** text.
+
+- Acronyms 
+
+  - Acronyms are pronounced as *words*.
+
+  - An *acronym* is a word formed from the *initial letters of a phrase*, with each letter representing the **first** letter of a word in that phrase.
+
+    - GUI: Graphical User interface
+
+
+- initialisms
+
+  - initialisms are pronounced as *individual* letters.
+
+    - HTML:  HyperText Markup Language
+
+&nbsp;
+
+### `<abbr></abbr>` (Abbreviation Element)
+
+The abbreviation element is providing helpful **context** behind the scenes, but users will still see the initialism as *normal text*.
+
+```html
+<p>
+  <abbr>HTML</abbr> is the foundation of the web.
+</p>
+```
+
+- if you want to help users understand what this initialism *means*, you can *show its full form* with the `title` attribute.
+
+  ```html
+  <p>
+    <abbr title="HyperText Markup Language">HTML</abbr> is the foundation of the web.
+  </p>
+  ```
+  -  The *style* of the abbreviation element will **change** when you add this attribute.
+  
+  -  When the user *hovers* over the abbreviation, the full form is displayed as a **tooltip**.
+
+  - Use `title` attribute *only* for those that might need **additional context**.
+
+&nbsp;
+
+`Note`: You should always **explain** their full meaning when you use them for the **first** time.
+
+&nbsp;
+
+##  Display Addresses
 
 
 
@@ -864,7 +914,6 @@ it is used for **short inline quotations from other sources**.
 
 
 &nbsp;
-
 
 
 &nbsp;
