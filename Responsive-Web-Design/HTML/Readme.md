@@ -904,7 +904,32 @@ The abbreviation element is providing helpful **context** behind the scenes, but
 
 &nbsp;
 
-##  Display Addresses
+## `<address></address>` (Address Element)
+
+The *contact address* element is used to represent **contact information** for a section on a web page. The `address` element is *versatile* and can be used for **business** pages, **author** pages, **personal** sites, and more.
+
+- When it comes to building out your website's **contact** sections, you should use the *semantic* `address` element over a *generic* element like a `div`.
+
+```html
+<address>
+  <h2>Company Name</h2>
+  <p>
+    1234 Elm Street<br />
+    Springfield, IL 62701<br />
+    United States
+  </p>
+  <p>Phone: <a href="tel:+15555555555">+1 (555) 555-5555</a></p>
+  <p>Email: <a href="mailto:contact@company.com">contact@company.com</a></p>
+</address>
+```
+
+&nbsp;
+
+`Note`: One of the *downsides* of using a `mailto` link is that users often perceive it as **spam**. *Unfortunately*, a lot of *spammers will use this option to send emails* to users. So just keep that in mind when you're using it.
+
+&nbsp;
+
+## Times & Dates
 
 
 
@@ -914,6 +939,7 @@ The abbreviation element is providing helpful **context** behind the scenes, but
 
 
 &nbsp;
+
 
 
 &nbsp;
