@@ -276,19 +276,81 @@ The *specificity value for external styles* is also determined by the *selectors
 
 &nbsp;
 
-## 
+## Universal Selector (`*`)
 
+The universal selector (`*`) is a special type of CSS selector that **matches any element** in the document.
 
+- The universal selector has the lowest specificity value of any selector. it contributes `0` to all parts of the specificity value `(0, 0, 0, 0)`.
 
+    - This means that _any other selector_, including `type` selectors, `class` selectors, `ID` selectors, and `inline` styles, will **override** the styles set by the universal selector.
 
+- it is used to apply a style to **all** elements on the page, which can be useful for **resetting** or **normalizing** styles across _different_ **browsers**.
 
+- The universal selector can be used to select all elements within a **specific** _context_ or **globally** across the entire document.
 
-
-
+```css
+/*Setting the margin and padding for the entire document.*/
+* {
+  margin: 0;
+  padding: 0;
+}
+```
 
 &nbsp;
 
+## Type Selectors (`h2`)
 
+Type selectors, also known as **element selectors**, target elements based on their **tag name**.
 
+- The specificity value for a type selector is `(0, 0, 0, 1)`.
+
+    - This means that `type` selectors will be **overridden** by `class` selectors, `ID` selectors, and `inline` styles, but can still apply styles unless those higher-specificity rules are present.
+
+- it allow you to _apply styles to all instances_ of a specific HTML **element**.
+
+- Type selectors are straightforward to use and are written simply as the _**tag name** of the element you want to style_.
+
+```css
+p {
+  color: blue;
+}
+```
 
 &nbsp;
+
+## Class Selectors (`.class`)
+
+Class selectors are a key part of CSS, allowing developers to **target multiple elements** with the **same class** _attribute_ and apply consistent _styling_.
+
+- The specificity value for a class selector is `(0, 0, 1, 0)`.
+
+  - This means that class selectors can **override** `type` selectors, but they can be **overridden** by `ID` selectors and `inline` styles.
+
+- Highly **versatile** and **efficient** for applying styles across a website.
+
+```css
+.highlight {
+  color: green;
+}
+```
+
+&nbsp;
+
+Class selectors can be **combined** with other selectors to create more **specific** rules.
+
+```css
+p.bold-text {
+  font-weight: bold;
+}
+```
+
+- Combining a paragraph `type` selector with a `class` selector `(0, 0, 1, 1)`
+
+    - Higher specificity than `class` selector _alone_.
+
+- This rule applies **only** to `p` elements that **also** have the `bold-text` _class_, making their text **bold**.
+
+&nbsp;
+
+## ID Selectors (`#id`)
+
