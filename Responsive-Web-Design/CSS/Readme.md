@@ -354,3 +354,20 @@ p.bold-text {
 
 ## ID Selectors (`#id`)
 
+ID selectors are among the most powerful selectors in CSS, allowing developers to *apply styles to specific elements* with **unique** identifiers. **No** two elements should **share** the same ID.
+
+- The **specificity** value for an ID selector is `(0, 1, 0, 0)`.
+  
+  - This means that `ID` selectors can **override** `class` selectors and `type` selectors but can be **overridden** by `inline` styles.
+
+- Highly effective for targeting *individual* elements that need **unique styling**.
+
+```css
+#unique {
+  color: purple;
+}
+```
+
+&nbsp;
+
+## `!important` Keyword
