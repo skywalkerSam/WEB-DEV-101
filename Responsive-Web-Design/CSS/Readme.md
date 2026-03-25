@@ -371,3 +371,28 @@ ID selectors are among the most powerful selectors in CSS, allowing developers t
 &nbsp;
 
 ## `!important` Keyword
+
+The `!important` keyword in CSS is used to give a style rule the **highest priority**, allowing it to **override** any other declarations for a property. When used, it **forces** the browser to apply the specified style, **regardless of the specificity** of other *selectors*.
+
+- it applies a style **regardless of other rules' specificity**.
+
+  - However, the `!important` keyword *does not change the specificity* of the CSS selector itself. it simply **ensures** that the *rule* with `!important` is *applied*, even if there are other *conflicting rules* with higher specificity.
+
+- Another appropriate use case for the `!important` keyword is to **override styles from third-party libraries** or frameworks when you do not have control over the original CSS.
+
+```css
+.para {
+  background-color: black !important;
+  color: white !important;
+}
+```
+
+- The `!important` keyword is used *after the CSS* value and *before the semicolon*.
+
+&nbsp;
+
+`Note`: Overusing the `!important` keyword can lead to **difficulties in maintaining and debugging** your CSS, as it *breaks the natural cascading of styles* and can lead to **unintended consequences**.
+
+&nbsp;
+
+## The Cascade Algorithm
