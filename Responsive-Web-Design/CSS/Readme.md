@@ -387,7 +387,7 @@ The `!important` keyword in CSS is used to give a style rule the **highest prior
 }
 ```
 
-- The `!important` keyword is used *after the CSS* value and *before the semicolon*.
+  - The `!important` keyword is used *after the CSS* value and *before the semicolon*.
 
 &nbsp;
 
@@ -396,3 +396,9 @@ The `!important` keyword in CSS is used to give a style rule the **highest prior
 &nbsp;
 
 ## The Cascade Algorithm
+
+The Cascade Algorithm is the process the browser uses to decide **which CSS rules to apply when there are multiple styles targeting the same element**. It ensures that the most appropriate styles are used, based on a set of *well-defined* rules.
+
+1. `Relevance`: The browser first **filters all the CSS rules to find those that actually apply to the element** in question. This includes matching **selectors** and considering **media queries** that might be *in **effect***.
+
+  - A media query is a CSS technique used to **apply styles based on the characteristics of the device** or viewport, such as its **width**, **height**, or **orientation**.
