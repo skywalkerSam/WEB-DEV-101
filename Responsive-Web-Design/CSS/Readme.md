@@ -401,4 +401,27 @@ The Cascade Algorithm is the process the browser uses to decide **which CSS rule
 
 1. `Relevance`: The browser first **filters all the CSS rules to find those that actually apply to the element** in question. This includes matching **selectors** and considering **media queries** that might be *in **effect***.
 
-  - A media query is a CSS technique used to **apply styles based on the characteristics of the device** or viewport, such as its **width**, **height**, or **orientation**.
+   - A media query is a CSS technique used to **apply styles based on the characteristics of the device** or viewport, such as its **width**, **height**, or **orientation**.
+
+2. `Origin & importance`: CSS can come from different **sources**: the browser’s default styles (`user-agent`), styles set by the *user*, and styles written by the *author* (`you`).
+
+    - Following the consideration of origin, the algorithm then **evaluates the importance of each rule**, giving **priority** to rules marked with `!important`, which **override other rules regardless of their source**.
+
+3. `Specificity`: When **two rules** from the **same origin** and **importance** level apply, the rule with the **higher specificity** will be *applied*.
+
+    - Specificity is a measure of **how targeted a selector is**, with **more specific selectors taking precedence** over more *general* ones.
+
+4. `Order of Appearance`: When **two rules** have the **same specificity**, the **one that appears last in the CSS will be applied**.
+
+&nbsp;
+
+`Note`: The **order** in which you write your *styles* can sometimes **affect the outcome**.
+
+&nbsp;
+
+`Note #2`: By considering **relevance**, **origin and importance**, **specificity**, **scope**, and **order of appearance**, `the Cascade Algorithm` ensures that your CSS behaves **predictably**, allowing you to design more *complex* and *nuanced* web pages.
+
+&nbsp;
+
+## inheritance
+
