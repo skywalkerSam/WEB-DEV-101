@@ -425,3 +425,48 @@ The Cascade Algorithm is the process the browser uses to decide **which CSS rule
 
 ## inheritance
 
+inheritance is a key concept in CSS that **determines how styles are passed down from parent elements to their child** elements. This allows for a more efficient way to apply **consistent styling** across an entire document.
+
+- inheritance is especially useful for **maintaining consistency** and **reducing redundancy** in your stylesheets.
+
+- Just like in the real world, where **children often inherit traits from their parents**, in CSS, **certain properties can be inherited by child elements from their parent** elements.
+
+  - In CSS, **not all properties are inherited by default**. For example, properties like `color`, `font-family`, and `line-height` are *inherited*. 
+  
+    - This means that **if you set the text color on a parent element, all of its child elements will inherit that color** unless you specifically ***override*** it. 
+
+    ```html
+    <div style="color: blue;">
+      This is the parent element.
+      <p>This is the child element inheriting the color.</p>
+    </div>
+    ```
+
+    - in this case, both the *parent* `div` and the *child* `p` will display their text in **blue** because the color is **inherited**.
+
+&nbsp;
+
+### `inherit` keyword
+
+On the other hand, properties like `margin`, `padding`, `border`, and `background` are **not inherited by default**. If you want a child element to inherit these styles, you need to **explicitly** set them, either directly on the child element or by using the `inherit` keyword.
+
+  - The `inherit` keyword can be used to **force inheritance** of a property from a parent element, even if that property is not normally inherited.
+
+    - if you want a specific child element to have the same `padding` as its parent, you can set `padding: inherit` on the child element:
+
+    ```html
+    <div style="padding: 20px;">
+      This is the parent element with padding.
+      <p style="padding: inherit;">This is the child element inheriting the padding.</p>
+    </div>
+    ```
+
+    - in this case, the child `p` element will inherit the `20px` of padding from its parent `div` element.
+
+&nbsp;
+
+`Note`: inheritance only works in **one direction** – from **parent to child**. If you override a style on a child element, it won’t affect the parent element.
+
+&nbsp;
+
+## 
