@@ -792,18 +792,45 @@ console.log(typeof isLoggedIn); // "boolean"
 
 &nbsp;
 
-## 
+## Number
 
+The `Number` data type represents a **numeric** value. JavaScript uses one unified `Number` type to account for numbers. 
 
+```js
+const wholeNumber = 50;
+const decimalNumber = 4.5;
+const negativeNumber = -7;
 
+console.log(typeof wholeNumber); // number
+console.log(typeof decimalNumber); // number
+console.log(typeof negativeNumber); // number
+```
 
+- JavaScript's `Number` type includes various kinds of numeric values, ranging from simple **integers** and **floating-point** numbers to special cases like `Infinity` and `NaN`.
 
+  - JavaScript can represent numbers that are beyond the maximum limit with `Infinity`. it comes up when **dividing a number by zero** or **exceeding the upper boundary** of the `Number` type.
 
+    ```js
+    const infiniteNumber = 1 / 0;
+    console.log(infiniteNumber); // Infinity
+    console.log(typeof infiniteNumber); // number
+    ```
 
+  - in JavaScript, some mathematical operations **don't result in a valid number**, i.e., why `NaN`, which stands for "Not a Number".
 
-
+    ```js
+    const notANumber = 'hello world' / 2;
+    console.log(notANumber); // NaN
+    console.log(typeof notANumber); // number
+    ```
 
 &nbsp;
+
+`Note`: Apart from the **standard decimal system** (`base 10`), JavaScript also **supports** numbers in different bases such as *binary*, *octal*, and *hexadecimal*. **Binary** is a `base-2` system that uses only digits `1` and `0`. **Octal** is a `base-8` system that uses only digits `0 to 7`. **Hexadecimal** is a `base-16` system that uses digits `0 to 9` and letters `a to f`, like you see in CSS *hex* colors.
+
+&nbsp;
+
+## Arithmetic Operators
 
 
 
