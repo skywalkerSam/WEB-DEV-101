@@ -832,9 +832,105 @@ console.log(typeof negativeNumber); // number
 
 ## Arithmetic Operators
 
+JavaScript provides tools to perform basic *arithmetic operations* on numbers, such as **addition** (`+`), **subtraction** (`-`), **multiplication** (`*`), and **division** (`/`). 
 
+- JavaScript also includes operators for more *complex* arithmetic operations, such as **remainder** (`%`) and **exponentiation** (`**`).
 
+&nbsp;
 
+`Note`: When you mix different operators in a single expression, the JavaScript engine follows a system called operator precedence to determine the order of operations. **Operator precedence determines the order in which operations are executed** in expressions.
+
+&nbsp;
+
+## Calculations with `Numbers` and `Strings`
+
+JavaScript is a language where things sometimes work in surprising, or even **weird**, ways. One such surprise occurs when you **mix numbers and strings** in calculations. 
+
+- **Type coercion** is when a value from one data type is converted into another.
+
+&nbsp;
+
+### Number + String = String concatenation
+
+in JavaScript, the `+` operator does **double duty**. It handles both **addition** and **string concatenation**.
+
+```js
+const result = 5 + '10';
+
+console.log(result); // 510
+console.log(typeof result); // string
+```
+
+- When you try to perform other arithmetic operations like **subtraction**, **multiplication**, or **division** with **a string and number**. In these cases, JavaScript tries to convert the string into a **number** before doing the math – another type coercion!
+
+  ```js
+  const subtractionResult = '10' - 5;
+  console.log(subtractionResult); // 5
+  console.log(typeof subtractionResult); // number
+
+  const multiplicationResult = '10' * 2;
+  console.log(multiplicationResult); // 20
+  console.log(typeof multiplicationResult); // number
+
+  const divisionResult = '20' / 2;
+  console.log(divisionResult); // 10
+  console.log(typeof divisionResult); // number
+  ```
+
+- But what if the **string isn't a number**? (`NaN`)
+
+  ```js
+  const subtractionResult = 'abc' - 5;
+  console.log(subtractionResult); // NaN
+  console.log(typeof subtractionResult); // number
+
+  const multiplicationResult = 'abc' * 2;
+  console.log(multiplicationResult); // NaN
+  console.log(typeof multiplicationResult); // number
+
+  const divisionResult = 'abc' / 2;
+  console.log(divisionResult); // NaN
+  console.log(typeof divisionResult); // number
+  ```
+
+  - in the examples above, the string `'abc'` does not represent a valid numeric value, so JavaScript cannot convert it into a **meaningful number**. When such **conversion fails**, JavaScript returns `NaN`, which stands for "*Not a Number*".
+
+- JavaScript treats **booleans as numbers** in mathematical operations: `true` becomes `1`, and `false` becomes `0`.
+
+  ```js
+  const result1 = true + 1;
+  console.log(result1); // 2
+  console.log(typeof result1); // number
+
+  const result2 = false + 1;
+  console.log(result2); // 1
+  console.log(typeof result2); // number
+
+  const result3 = 'Hello' + true;
+  console.log(result3); // "Hellotrue"
+  console.log(typeof result3); // string
+  ```
+
+- JavaScript treats `null` as `0` and `undefined` as `NaN` in mathematical operations.
+
+  ```js
+  const result1 = null + 5;
+  console.log(result1); // 5
+  console.log(typeof result1); // number
+
+  const result2 = undefined + 5;
+  console.log(result2); // NaN
+  console.log(typeof result2); // number
+  ```
+
+&nbsp;
+
+`Note`: JavaScript often performs **type coercion**, *automatically* converting data types such as numbers, strings, and booleans in sometimes **unexpected ways**. 
+
+&nbsp;
+
+## Operator Precedence
 
 
 &nbsp;
+
