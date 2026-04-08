@@ -931,6 +931,59 @@ console.log(typeof result); // string
 
 ## Operator Precedence
 
+Operator precedence determines **the order in which operations are evaluated** in an expression. Think of operator precedence like in **mathematics**, where division and multiplication happen before addition and subtraction.
+
+- Operators with **higher** precedence are evaluated before those with **lower** precedence.
+
+  ```js
+  const result = 2 + 3 * 4;
+  console.log(result); // 14
+
+  const result = 2 + 6 / 3;
+  console.log(result); // 4
+  ```
+
+- Similar to mathematics, you can use parentheses `()` around certain parts of your expression to run *first*, **regardless of precedence** rules.
+
+  ```js
+  const result = (2 + 3) * 4;
+  console.log(result); // 20
+  ```
+
+- **Associativity** is what tells JavaScript whether to evaluate operators from **left to right** or **right to left**. 
+  
+  - For most operators like **addition** and **multiplication**, associativity is ***left to right***.
+
+    ```js
+    const result = 10 - 2 + 3;
+    console.log(result); // 11
+    ```
+
+  - Some operators, like assignment (`=`), are **right-to-left** associative. This means the right side of the expression gets evaluated first.
+
+    ```js
+    let a, b;
+    a = b = 5;
+
+    console.log(a); // 5
+    console.log(b); // 5
+    console.log(a + b); // 10
+    ```
+
+  - The exponent operator (`**`) is also **right-to-left** associative.
+
+    ```js
+    const result = 2 ** 3 ** 2;
+    console.log(result); // 512
+    ```
+
+&nbsp;
+
+## increment and Decrement Operators
+
+
+
+
 
 &nbsp;
 
