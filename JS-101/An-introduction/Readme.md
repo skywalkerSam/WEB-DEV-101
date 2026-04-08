@@ -981,9 +981,47 @@ Operator precedence determines **the order in which operations are evaluated** i
 
 ## increment and Decrement Operators
 
+The increment and decrement operators are represented by `++` and `--`, respectively. They both allow you to adjust the value of a variable by `1`.
+
+- instead of writing something like `x = x + 1` or `x = x - 1`, you can simply use `x++` to add `1`, or `x--` to subtract `1`. 
+
+  - it's faster, cleaner, and easier to read.
+
+- **Prefix** & **Postfix**
+
+  - Prefix (`++x`) **increases** the value of the variable **first**, then returns a new value.
+
+    ```js
+    let x = 5;
+
+    console.log(++x); // 6
+    console.log(x); // 6
+    ```
+
+  - Postfix (`x++`) **returns** the current value of the variable **first**, then increases it.
+
+    ```js
+    let y = 5;
+
+    console.log(y++); // 5
+    console.log(y); // 6
+    ```
+
+&nbsp;
+
+`Note`: So, if you **need the updated value right away**, use **prefix**. If you **want the current value first** and you don’t care about the **increment** until **later**, go with **postfix**.
+
+&nbsp;
+
+## Compound Assignment Operators
+
+
+
+
 
 
 
 
 &nbsp;
+
 
