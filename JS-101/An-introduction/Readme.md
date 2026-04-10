@@ -1122,11 +1122,97 @@ Comparison operators allow you to **compare two values** and return a `true` or 
 
 &nbsp;
 
-##
+## Unary Operators
+
+Unary operators act on a **single operand to perform operations** like **type conversion**, **value manipulation**, or checking certain **conditions**.
 
 
+- The **unary plus** operator **converts its operand into a number**. If the operand is already a number, it remains unchanged.
 
+  - Unary plus is handy when you want to **make sure** you're working with **a numeric value**.
 
+  ```js
+  const str = '42';
+  const strToNum = +str;
+
+  console.log(strToNum); // 42
+  console.log(typeof str); // string
+  console.log(typeof strToNum); // number
+  ```
+
+- The **unary negation operator** works the same as plus, except it **negates the value** of the operand. in other words, it **flips the sign** from `+` to a `-`.
+
+  ```js
+  const str = '42';
+  const strToNegativeNum = -str;
+
+  console.log(strToNegativeNum); // -42
+  console.log(typeof str); // string
+  console.log(typeof strToNegativeNum); // number
+  ```
+
+- The **logical NOT** operator, represented by an exclamation mark (`!`), is another unary operator. it **flips the boolean value** of its operand. So, if the operand is `true`, it becomes `false`, and if it's `false`, it becomes `true`. 
+
+  ```js
+  let isOnline = true;
+  console.log(!isOnline); // false
+
+  let isOffline = false;
+  console.log(!isOffline); // true
+  ```
+
+- The `void` keyword is a unary operator that **evaluates an expression** and **returns** `undefined`.
+
+  ```js
+  const result = void (2 + 2);
+
+  console.log(result); // undefined
+  ```
+
+  - `void` is also commonly used in *hyperlinks* to **prevent navigation**.
+
+    ```js
+    <a href="javascript:void(0);">Click Me</a>
+    ```
+
+- The `typeof` operator **returns the type** of its operand as a **string**.
+
+  ```js
+  const value = 'Hello world';
+
+  console.log(typeof value); // string
+  ```
+
+- The **bitwise NOT** operator (`~`) **inverts the binary representation of a number**. Computers store numbers in binary format (1s and 0s). The `~` operator **flips every bit**, meaning it changes all **1s to 0s** and all **0s to 1s**. 
+
+  ```js
+  const num = 5; // The binary for 5 is 00000101
+
+  console.log(~num); // -6
+  ```
+
+  - in this example, `5` became `-6` because by applying the  `~` operator to `5`, you get `- (5 + 1)`, which equals `-6` due to two's complement representation. Two's complement is a way computers represent negative numbers in binary. You probably won't use the bitwise NOT often unless you're working with low-level programming tasks like **manipulating bits directly**.
+
+&nbsp;
+
+## Bitwise Operators
+
+Bitwise operators in JavaScript are special operators that **work on the binary representation of numbers**.
+
+- A **bit** is the most basic unit of information.
+
+  - it can have only two values: `0` or `1`. 
+
+- **Binary** is a **number system** that uses only `0` and `1` to represent all numbers.
+
+  - in binary, each digit represents a **power of** `2`, *starting* from the **rightmost** digit and *increasing* as we move **left**.
+
+```
+- 10 in binary is 1010
+
+1              0               1               0
+1*(2**3) = 8   0*(2**2) = 0    1*(2**1) = 2    0*(2**0) = 0   => 8+0+2+0 = 10
+```
 
 
 
