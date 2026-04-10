@@ -1074,6 +1074,55 @@ console.log(5 !== "5"); // true
 
 ## Comparison Operators
 
+Comparison operators allow you to **compare two values** and return a `true` or `false` result. You can then use the result to make a decision or control the flow of your program.
+
+- The greater than operator (`>`), checks if the value on the *left* is **greater** than the one on the *right*.
+
+  ```js
+  let a = 6;
+  let b = 9;
+
+  console.log(a > b); // false
+  console.log(b > a); // true
+  ```
+
+- The greater than or equal operator (`>=`), checks if the value on the *left* is **either greater than or equal** to the one on the *right*.
+
+  ```js
+  let a = 6;
+  let b = 9;
+  let c = 6;
+
+  console.log(a >= b); // false
+  console.log(b >= a); // true
+  console.log(a >= c); // true
+  ```
+
+- The lesser than operator (`<`) checks if the value on the *left* is **smaller** than the one on the *right*.
+
+  ```js
+  let a = 6;
+  let b = 9;
+
+  console.log(a < b); // true
+  console.log(b < a); // false
+  ```
+
+- The less than or equal operator (`<=`) checks if the value on the *left* is **smaller than or equal** to the one on the *right*.
+
+  ```js
+  let a = 6;
+  let b = 9;
+  let c = 6;
+
+  console.log(a <= b); // true
+  console.log(b <= a); // false
+  console.log(a <= c); // true
+  ```
+
+&nbsp;
+
+##
 
 
 
@@ -1083,3 +1132,4 @@ console.log(5 !== "5"); // true
 
 
 &nbsp;
+
