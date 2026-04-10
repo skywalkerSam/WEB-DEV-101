@@ -1015,6 +1015,66 @@ The increment and decrement operators are represented by `++` and `--`, respecti
 
 ## Compound Assignment Operators
 
+Compound assignment operators provide a concise **shorthand** for an operation on a variable followed by storing the result in that **same variable**. They combine the **operation and assignment** into a shorter form like `x += y`, which is equivalent to writing `x = x + y` but **without repeating the variable name**. 
+
+- The **addition assignment operator** (`+=`) takes the current value of the variable, adds the specified number to it, and then assigns the result back to the variable.
+
+  ```js
+  let total = 10;
+  total += 5;
+
+  console.log(total); // 15
+  ```
+
+  - There's a **subtraction** assignment operator (`-=`)
+
+  - The **multiplication** assignment operator (`*=`)
+
+  - Lastly, there's a **division** assignment operator (`/=`)
+
+- There's a compound assignment operator for every operator in JavaScript. So, apart from the four already mentioned, we also have...
+
+    - **Remainder assignment** operator (`%=`), which divides a variable by the specified number and assigns the remainder to the variable.
+
+    - **Exponent assignment** operator (`**=`), which raises a variable to the power of the specified number and reassigns the result to the variable.
+
+    - **Bitwise AND assignment** operator (`&=`), which performs a bitwise AND operation with the specified number and reassigns the result to the variable.
+
+    - **Bitwise OR assignment** operator (`|=`), which performs a bitwise OR operation with the specified number and reassigns the result to the variable.
+
+&nbsp;
+
+## Booleans, Equality and inequality Operators
+
+Booleans are a data type with only `true` and `false` values. They're useful because they allow you to do something based on some **conditions**.
+
+- To compare two values, you can use either the equality (`==`) or strict equality (`===`) operator. The result of the comparison will be a boolean of either `true` or `false`.
+
+```js
+// equality: performs type coercion
+console.log(5 == "5"); // true
+
+// strict equality
+console.log(5 === '5'); // false
+
+// inequality
+console.log(5 != "5"); // false
+
+// strict inequality
+console.log(5 !== "5"); // true
+```
+
+  - Type coercion converts the **string** value to a **number** and then *compares* the values.
+
+&nbsp;
+
+`Note`: it is considered best practice to **use strict** inequality and equality operators whenever possible, as *they do not perform type coercion*. it checks both **value** and **type**, providing more *predictable* results.
+
+&nbsp;
+
+## Comparison Operators
+
+
 
 
 
@@ -1023,5 +1083,3 @@ The increment and decrement operators are represented by `++` and `--`, respecti
 
 
 &nbsp;
-
-
