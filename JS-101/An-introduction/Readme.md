@@ -1207,15 +1207,80 @@ Bitwise operators in JavaScript are special operators that **work on the binary 
 
   - in binary, each digit represents a **power of** `2`, *starting* from the **rightmost** digit and *increasing* as we move **left**.
 
-```
-- 10 in binary is 1010
+    ```
+    - 10 in binary is 1010
+    
+    1              0               1               0
+    1*(2**3) = 8   0*(2**2) = 0    1*(2**1) = 2    0*(2**0) = 0   => 8+0+2+0 = 10
+    ```
 
-1              0               1               0
-1*(2**3) = 8   0*(2**2) = 0    1*(2**1) = 2    0*(2**0) = 0   => 8+0+2+0 = 10
-```
+- **Bitwise operators** perform **operations on the binary representation** of numbers.
+
+  - The bitwise **AND** (`&`) operator **returns** a `1` in each bit position for which the corresponding bits of both operands are `1`.
+
+    ```js
+    let a = 5;  // Binary: 101
+    let b = 3;  // Binary: 011
+    console.log(a & b);  // 1 (Binary: 001)
+    ```
+
+  - The bitwise **OR** (`|`) operator **returns** a `1` in each bit position for which the corresponding bits of either or both operands are `1`.
+
+    ```js
+    let a = 5;  // Binary: 101
+    let b = 3;  // Binary: 011
+    console.log(a | b);  // 7 (Binary: 111)
+    ```
+
+  - The bitwise **XOR** (`^`) operator **returns** a `1` in each bit position for which the corresponding bits of either, but not both, operands are `1`.
+
+    ```js
+    let a = 5;  // Binary: 101
+    let b = 3;  // Binary: 011
+    console.log(a ^ b);  // 6 (Binary: 110)
+    ```
+
+  - The bitwise **NOT** (`~`) operator **inverts** all the **bits** of its operand.
+
+    ```js
+    let a = 5;  // Binary: 101
+    console.log(~a);  // -6
+    ```
+
+    - This might seem surprising, but it's because of how negative numbers are represented in binary using two's complement.
+    
+  - The left shift (`<<`) operator **shifts** all bits to the **left** by a specified number of positions.
+
+    ```js
+    let a = 5;  // Binary: 101
+    console.log(a << 1);  // 10 (Binary: 1010)
+    ```
+
+    - Here, all bits are shifted one position to the left, effectively **multiplying** the number by `2`.
+    
+
+  - The right shift (`>>`) operator **shifts** all bits to the **right**.
+
+    ```js
+    let a = 5;  // Binary: 101
+    console.log(a >> 1);  // 2 (Binary: 10)
+    ```
+
+    - Here, all bits are shifted one position to the right, effectively **dividing** the number by `2` and rounding down.
+
+&nbsp;
+
+`Note`: Bitwise operators are often used in **low-level programming** and **cryptography**. While they may not be as commonly used in everyday JavaScript programming, understanding them can be beneficial for certain **specialized tasks** and can deepen your understanding of **how computers work at a fundamental level**.
+
+&nbsp;
+
+## Conditional Statements
+
+
+
+
 
 
 
 
 &nbsp;
-
