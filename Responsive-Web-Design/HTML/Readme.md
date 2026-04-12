@@ -581,6 +581,388 @@ There are some other replaced elements, such as `video`, and `embed`. And **some
 
 &nbsp;
 
+## Semantic HTML
+
+Semantics are the **meaning of words, or phrases**, in a *language*. The semantic meaning of an element refers to **what special information** that element *conveys*.
+
+- Using proper semantic HTML will ensure the best experience for users with **assistive technology** like screen readers.
+
+- Using correct semantic elements can improve your development experience (**DX**).
+
+- Semantic HTML can also improve your search rankings (**SEO**).
+
+&nbsp;
+
+Most elements have **semantic** meaning. The `div` element is one of the very few that **does not**.
+
+- The `header` element for defining the **header of the document, or section**.
+
+- The navigation section element, `nav`, for sections with **navigation links**.
+
+    ```html
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    ```
+
+- The `section` element for **grouping related** information.
+
+- The `figure` element for **illustrations** and **diagrams**.
+
+- The `p` element is for **paragraph** of text.
+
+&nbsp;
+
+## Structural Hierarchy
+
+- There can be only **one** `<h1></h1>` element per page.
+
+- There can be **multiple** `<h2></h2>` elements.
+
+- **Do not** skip from `h1` to `h3` directly.
+
+- **Do not** use `<h1></h1>` to create **larger text** on your page.
+
+  - **Use the correct structural element**, and *style* it with **CSS**. 
+
+
+```html
+<section>
+  <h1>freeCodeCamp</h1>
+  <h2>Learn Front-End Development</h2>
+  <h3>Introduction to HTML</h3>
+</section>
+```
+
+Finally, depending on how **incorrect** your structure is, your HTML may not even be technically valid. When this happens, **the web browser has to effectively guess what you meant to do**. And what it guesses **might not even be what you want** at all.
+
+&nbsp;
+
+`Note`: Using the **right hierarchy** is important for **accessibility** and **SEO**.
+
+&nbsp;
+
+## Presentational vs. Semantic HTML
+
+**Presentational HTML** focuses on the **appearance** and **style** of the content.
+
+- Used in the **early days of HTML**.
+
+- **Deprecated** and **not recommended** anymore due to their limitations and negative impact on accessibility and maintainability.
+
+  - `center`
+
+    ```html
+    <center>
+      This text is centered.
+      <p>HTML is awesome.</p>
+    </center>
+
+    <p>Another example text.</p>
+    ```
+
+  - `big`
+
+    ```html
+    <p>
+      This text has a normal font size.
+      <big>This text is larger.</big>
+      Some other text.
+    </p>
+    ```
+
+  - `font` 
+    
+    ```html
+    <font size="7" color="blue">This text is blue and large.</font> 
+    ```
+
+&nbsp;
+
+`Note`: While this element **still works**, you should not use it *because* the **font size and color should always be set in CSS**, not in HTML.
+
+&nbsp;
+
+**Semantic HTML** is now **the recommended practice**. It describes the content of the elements, so it's much **easier to read**, **understand**, and **maintain**.
+
+- Semantic HTML **describes the content** structure, while presentational HTML **focuses on the appearance**.
+
+&nbsp;
+
+## `<i></i>` vs `<em></em>`
+
+`i` is used for highlighting **alternative voice** or **mood**, **idiomatic terms** from **another language**, **technical terms**, and **thoughts**.
+
+```html
+<p>There is a certain <i lang="fr">je ne sais quoi</i> in the air.</p>
+```
+
+- it was originally used for **presentational** purposes to display the text in ***italics***.
+
+- The `i` element does not indicate if the text is important or not, it only shows that it's *somehow different from the surrounding text*.
+
+&nbsp;
+
+`em` is used to *emphasize* the **importance** of the text. You should use this element for parts of the text that *require a special emphasis compared to surrounding text*.
+
+```html
+<p>
+  Never give up on <em>your</em> dreams.
+</p>
+```
+
+&nbsp;
+
+`Note`: Even if it looks the same when the text was inside the *idiomatic text* element, the *semantic emphasis* element conveys its **meaning** and **importance** behind the scenes.
+
+&nbsp;
+
+`Note #2`: it's important to know that these elements **should not be used for presentational purposes** only. if you need to display the text in italics, but the text *doesn't* have a special purpose, style, or meaning in the paragraph, you should **use CSS instead**.
+
+&nbsp;
+
+## `<b></b>` vs. `<strong></strong>`
+
+The "**bring attention to**" element, `b`, is commonly used to highlight **keywords** in summaries, or product **names** in reviews.
+
+```html
+<p>
+  We tested several products, including the <b>SuperSound 3000</b> for audio
+  quality, the <b>QuickCharge Pro</b> for fast charging, and the
+  <b>EcoClean Vacuum</b> for cleaning. The first two performed well, but the
+  <b>EcoClean Vacuum</b> did not meet expectations.
+</p>
+```
+
+&nbsp;
+
+`strong` is a semantic HTML element that *emphasizes* text that is **crucial**, or **urgent**.
+
+- The `strong` element communicates that **sense of urgency**.
+
+- if you need to emphasize the **importance** of the text, you should use the `strong` element instead of the `b` element.
+
+```html
+<p>
+  <strong>Warning:</strong> This product may cause allergic reactions.
+</p>
+```
+
+&nbsp;
+
+`Note`: Visually both are very **similar**, because they are both rendered as **bold** by default. But their **meanings** are quite *different*. While the `"bring attention to"` element only draws **attention** to the text, without indicating the higher level of importance, the `strong` element does more than that. it conveys a sense of **importance**, or **urgency**.
+
+&nbsp;
+
+## Description Lists
+
+Description lists are perfect for presenting **terms** and **definitions** in an organized and *easy-to-read* format, like in a glossary, or real dictionary, where you can find **words** with their corresponding **definitions**.
+
+```html
+<dl>
+  <dt>Flour</dt>
+  <dd>2 cups</dd>
+  <dt>Sugar</dt>
+  <dd>1/2 cup</dd>
+  <dt>Vegetable Oil</dt>
+  <dd>2 tablespoons</dd>
+</dl>
+```
+
+- The **description list** element, `dl`, which is the **container** for the entire list. 
+
+- The **description term** element, `dt`, or *title**
+
+- The **description details** element, `dd`, for the description, or **details** associated with that term.
+
+&nbsp;
+
+`Note`: Other use cases for description lists include **product specifications**, **frequently asked questions**, **contact information**, and **metadata**. Essentially, when you have *two* related pieces of information in a **key-value** pair format, where one acts as a *label*, the **key**, and the other acts as *additional related information*, the **value**, you can use a description list.
+
+&nbsp;
+
+## `<blockquote></blockquote>`
+
+The quoted elements are used to **distinguish quoted text from the surrounding content**.
+
+- **Extended** quotations.
+
+- Slightly **indented** text.
+
+- Representing a section **quoted from another source**.
+
+- if the source of the quote has an address, you can cite it with the `cite` **attribute**. The value of this attribute should be a **valid URL**.
+
+  - While this attribute *doesn't* change the presentation of the block quote, it's very *helpful* for giving **screen readers** and **search engines** more information about the quote. 
+
+```html
+<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+  "Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?"
+</blockquote>
+```
+
+- if you want to start and end the block quote with quotation marks (`" "`), you may need to write them **explicitly** within the text.
+
+&nbsp;
+
+### `<cite></cite>` element
+
+if you want to *attribute the source visually*, you can add a citation element, `cite`, *outside of the block quotation element*. 
+
+- This is **different** from the cite *attribute*.
+
+- it is uses to mark up the **title** of a referenced ***creative work*** like a **book**, article, **song**, **film**, **website**, or **research paper**.
+
+```html
+<div>
+  <blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+    Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?
+  </blockquote>
+  <p>—Quincy Larson, <cite>How to Learn to Code and Get a Developer Job [Full Book].</cite></p>
+</div>
+```
+
+&nbsp;
+
+### `<q></q>` (inline quotation)
+
+it is used for **short inline quotations from other sources**.
+
+- Short quotations.
+
+- Quoted text is *part of the paragraph* and it's surrounded by quotation marks (`" "`).
+
+- You can also add a `cite` attribute to *attribute* the source.
+
+```html
+<p>
+  As Quincy Larson said,
+  <q cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+    Momentum is everything.
+  </q>
+</p>
+```
+
+&nbsp;
+
+`Note`: You should use `blockquote` for **extended quotations** from other sources and inline quotes (`q`) for **short quotations** from other sources that should be part of existing paragraphs.
+
+&nbsp;
+
+## Abbreviations
+
+An abbreviation is a **shortened form** of a word or phrase. it is used for writing **concise** text.
+
+- Acronyms 
+
+  - Acronyms are pronounced as *words*.
+
+  - An *acronym* is a word formed from the *initial letters of a phrase*, with each letter representing the **first** letter of a word in that phrase.
+
+    - GUI: Graphical User interface
+
+
+- initialisms
+
+  - initialisms are pronounced as *individual* letters.
+
+    - HTML:  HyperText Markup Language
+
+&nbsp;
+
+### `<abbr></abbr>` (Abbreviation Element)
+
+The abbreviation element is providing helpful **context** behind the scenes, but users will still see the initialism as *normal text*.
+
+```html
+<p>
+  <abbr>HTML</abbr> is the foundation of the web.
+</p>
+```
+
+- if you want to help users understand what this initialism *means*, you can *show its full form* with the `title` attribute.
+
+  ```html
+  <p>
+    <abbr title="HyperText Markup Language">HTML</abbr> is the foundation of the web.
+  </p>
+  ```
+  -  The *style* of the abbreviation element will **change** when you add this attribute.
+  
+  -  When the user *hovers* over the abbreviation, the full form is displayed as a **tooltip**.
+
+  - Use `title` attribute *only* for those that might need **additional context**.
+
+&nbsp;
+
+`Note`: You should always **explain** their full meaning when you use them for the **first** time.
+
+&nbsp;
+
+## `<address></address>` (Address Element)
+
+The *contact address* element is used to represent **contact information** for a section on a web page. The `address` element is *versatile* and can be used for **business** pages, **author** pages, **personal** sites, and more.
+
+- When it comes to building out your website's **contact** sections, you should use the *semantic* `address` element over a *generic* element like a `div`.
+
+```html
+<address>
+  <h2>Company Name</h2>
+  <p>
+    1234 Elm Street<br />
+    Springfield, IL 62701<br />
+    United States
+  </p>
+  <p>Phone: <a href="tel:+15555555555">+1 (555) 555-5555</a></p>
+  <p>Email: <a href="mailto:contact@company.com">contact@company.com</a></p>
+</address>
+```
+
+&nbsp;
+
+`Note`: One of the *downsides* of using a `mailto` link is that users often perceive it as **spam**. *Unfortunately*, a lot of *spammers will use this option to send emails* to users. So just keep that in mind when you're using it.
+
+&nbsp;
+
+## Date & Time
+
+The `time` element is used to represent a specific moment in time.
+
+```html
+<p>
+  The reservations are for <time datetime="20:00">20:00 </time>
+</p>
+```
+
+- The `datetime` attribute is used to *translate* dates and times into a **machine-readable** format.
+
+- Aids *SEO* & browser effectiveness.
+
+- The **value** for the `datetime` attribute must be either a *valid* **year**, valid **month**, valid **time**, local date, global **date**, or **valid duration** *string*.
+
+  ```html
+  <p>
+    The graduation will be on <time datetime="2024-06-15T15:00">June 15</time>
+  </p>
+  ```
+
+  - The value for the `datetime` attribute is in the `ISO 8601` format. ISO 8601 is an **international standard** to represent **dates** and **times**.
+
+  - The **first** part of that **value** is the **year, month and day**. 
+
+  - The capital `T` in the value is a **separator** between the date and time.
+
+&nbsp;
+
+`Note`: Whenever you need to *represent* **events**, publication **dates**, or **appointments**, it is best to use the `time` element.
+
+&nbsp;
+
 ## 
 
 
@@ -589,17 +971,7 @@ There are some other replaced elements, such as `video`, and `embed`. And **some
 
 
 
-
-
-
-
 &nbsp;
-
-
-
-
-
-
 
 
 &nbsp;
